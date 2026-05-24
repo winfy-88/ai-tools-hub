@@ -190,6 +190,7 @@ main { max-width: 1280px; margin: 0 auto; padding: 0 24px 80px; }
 .tag-free  { background: rgba(0,206,201,.12); color: var(--green); border: 1px solid rgba(0,206,201,.25); }
 .tag-paid  { background: rgba(253,121,168,.12); color: var(--orange); border: 1px solid rgba(253,121,168,.25); }
 .tag-freemium { background: rgba(255,234,167,.12); color: var(--yellow); border: 1px solid rgba(255,234,167,.25); }
+.tag-open-source { background: rgba(99,102,241,.12); color: #a5b4fc; border: 1px solid rgba(99,102,241,.25); }
 .tag-hot   { background: rgba(108,92,231,.15); color: var(--accent2); border: 1px solid rgba(108,92,231,.3); }
 .card-footer {
   display: flex; align-items: center; justify-content: space-between;
@@ -283,7 +284,7 @@ function escapeHtml(str) {
 function buildToolCard(tool) {
   const newBadge = tool.new ? `<span class="new-banner">🆕 NEW</span>` : '';
   const tags = tool.tags.map(t => {
-    const cls = t === '免费' || t === '开源' ? 'tag-free' : t === '付费' ? 'tag-paid' : t === '热门' || t === 'Hot' ? 'tag-hot' : 'tag-freemium';
+    const cls = t === '免费' ? 'tag-free' : t === '开源' || t === 'Open Source' ? 'tag-open-source' : t === '付费' ? 'tag-paid' : t === '热门' || t === 'Hot' ? 'tag-hot' : 'tag-freemium';
     return `<span class="tag ${cls}">${escapeHtml(t)}</span>`;
   }).join('');
 

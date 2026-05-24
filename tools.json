@@ -1086,6 +1086,51 @@
       "featured": null,
       "new": true,
       "addedDate": "2026-05-24"
+    },
+    {
+      "id": "browser-use",
+      "name": "Browser Use",
+      "cat": "code",
+      "tagline": "让 AI Agent 自动操作网页，像人一样点击、填写、浏览，自动化在线任务",
+      "pricing": "open-source",
+      "pricingLabel": "开源免费",
+      "url": "https://github.com/browser-use/browser-use",
+      "emoji": "🌐",
+      "gradient": "linear-gradient(135deg,#6366f1,#8b5cf6)",
+      "tags": ["开源", "Agent", "自动化"],
+      "featured": null,
+      "new": true,
+      "addedDate": "2026-05-24"
+    },
+    {
+      "id": "cc-switch",
+      "name": "CC Switch",
+      "cat": "chat",
+      "tagline": "跨平台 AI 编程助手聚合器，统一使用 Claude Code / Codex / OpenCode / OpenClaw 等",
+      "pricing": "free",
+      "pricingLabel": "免费",
+      "url": "https://ccswitch.io",
+      "emoji": "🔀",
+      "gradient": "linear-gradient(135deg,#10b981,#059669)",
+      "tags": ["免费", "Open Source", "AI编程"],
+      "featured": { "rank": 3, "title": "AI编程新星" },
+      "new": true,
+      "addedDate": "2026-05-24"
+    },
+    {
+      "id": "nocobase",
+      "name": "NocoBase",
+      "cat": "code",
+      "tagline": "开源 AI + 无代码平台，快速搭建业务系统，AI 工作在生产验证过的基础设施上",
+      "pricing": "open-source",
+      "pricingLabel": "开源免费",
+      "url": "https://github.com/nocobase/nocobase",
+      "emoji": "🏗️",
+      "gradient": "linear-gradient(135deg,#0ea5e9,#6366f1)",
+      "tags": ["开源", "无代码", "企业级"],
+      "featured": null,
+      "new": true,
+      "addedDate": "2026-05-24"
     }
   ]
 }
