@@ -5,284 +5,268 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Tools Hub — 发现最好的 AI 工具</title>
   <meta name="description" content="精心 curated 的 AI 工具导航站，涵盖聊天、写作、画图、代码、视频等全品类，每日更新。" />
+  <meta name="generator" content="AI Tools Hub v2.0 — generated from tools.json" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
-  <style>
-    /* ── Reset & Base ── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg:       #0f0f1a;
-      --card:     #1a1a2e;
-      --card2:    #16162a;
-      --accent:   #6c5ce7;
-      --accent2:  #a29bfe;
-      --green:    #00cec9;
-      --orange:   #fd79a8;
-      --yellow:   #ffeaa7;
-      --text:     #e8e8f0;
-      --muted:    #8888a8;
-      --border:   #2a2a45;
-      --radius:   14px;
-      --shadow:   0 4px 24px rgba(0,0,0,.4);
-      --transition: .25s cubic-bezier(.4,0,.2,1);
-    }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
-      line-height: 1.6;
-      min-height: 100vh;
-    }
-    a { color: inherit; text-decoration: none; }
-    ul { list-style: none; }
+  <style>/* ══ Reset & Base ══ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg:       #0f0f1a;
+  --card:     #1a1a2e;
+  --card2:    #16162a;
+  --accent:   #6c5ce7;
+  --accent2:  #a29bfe;
+  --green:    #00cec9;
+  --orange:   #fd79a8;
+  --yellow:   #ffeaa7;
+  --text:     #e8e8f0;
+  --muted:    #8888a8;
+  --border:   #2a2a45;
+  --radius:   14px;
+  --shadow:   0 4px 24px rgba(0,0,0,.4);
+  --transition: .25s cubic-bezier(.4,0,.2,1);
+}
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
 
-    /* ── Header ── */
-    header {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(15,15,26,.85);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid var(--border);
-      padding: 0 24px;
-    }
-    .header-inner {
-      max-width: 1280px; margin: 0 auto;
-      display: flex; align-items: center; gap: 20px;
-      height: 64px;
-    }
-    .logo {
-      font-size: 1.35rem; font-weight: 800;
-      background: linear-gradient(135deg, var(--accent), var(--green));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      white-space: nowrap;
-    }
-    .search-box {
-      flex: 1; max-width: 420px;
-      position: relative;
-    }
-    .search-box input {
-      width: 100%; padding: 9px 16px 9px 38px;
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 50px; color: var(--text);
-      font-size: .9rem; outline: none;
-      transition: border-color var(--transition), box-shadow var(--transition);
-    }
-    .search-box input:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(108,92,231,.25);
-    }
-    .search-icon {
-      position: absolute; left: 13px; top: 50%; transform: translateY(-50%);
-      color: var(--muted); font-size: .95rem; pointer-events: none;
-    }
-    .header-right { margin-left: auto; display: flex; gap: 12px; align-items: center; }
-    .badge-live {
-      font-size: .75rem; padding: 4px 12px;
-      background: rgba(0,206,201,.12); color: var(--green);
-      border: 1px solid rgba(0,206,201,.3);
-      border-radius: 50px; font-weight: 600;
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0%,100% { opacity:1; } 50% { opacity:.6; }
-    }
+/* ══ Header ══ */
+header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(15,15,26,.85);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+}
+.header-inner {
+  max-width: 1280px; margin: 0 auto;
+  display: flex; align-items: center; gap: 20px;
+  height: 64px;
+}
+.logo {
+  font-size: 1.35rem; font-weight: 800;
+  background: linear-gradient(135deg, var(--accent), var(--green));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+.search-box { flex: 1; max-width: 420px; position: relative; }
+.search-box input {
+  width: 100%; padding: 9px 16px 9px 38px;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 50px; color: var(--text);
+  font-size: .9rem; outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.search-box input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(108,92,231,.25);
+}
+.search-icon {
+  position: absolute; left: 13px; top: 50%; transform: translateY(-50%);
+  color: var(--muted); font-size: .95rem; pointer-events: none;
+}
+.header-right { margin-left: auto; display: flex; gap: 12px; align-items: center; }
+.badge-live {
+  font-size: .75rem; padding: 4px 12px;
+  background: rgba(0,206,201,.12); color: var(--green);
+  border: 1px solid rgba(0,206,201,.3);
+  border-radius: 50px; font-weight: 600;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:.6; } }
 
-    /* ── Hero ── */
-    .hero {
-      text-align: center; padding: 72px 24px 56px;
-      background: radial-gradient(ellipse at 50% 0%, rgba(108,92,231,.18) 0%, transparent 65%);
-    }
-    .hero h1 {
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 800; line-height: 1.2;
-      margin-bottom: 16px;
-    }
-    .hero h1 span {
-      background: linear-gradient(135deg, var(--accent), var(--green), var(--orange));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    }
-    .hero p {
-      color: var(--muted); font-size: 1.1rem;
-      max-width: 560px; margin: 0 auto 32px;
-    }
-    .stats-row {
-      display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
-    }
-    .stat { text-align: center; }
-    .stat-num { font-size: 2rem; font-weight: 800; color: var(--accent2); }
-    .stat-label { font-size: .8rem; color: var(--muted); margin-top: 2px; }
+/* ══ Hero ══ */
+.hero {
+  text-align: center; padding: 72px 24px 56px;
+  background: radial-gradient(ellipse at 50% 0%, rgba(108,92,231,.18) 0%, transparent 65%);
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800; line-height: 1.2;
+  margin-bottom: 16px;
+}
+.hero h1 span {
+  background: linear-gradient(135deg, var(--accent), var(--green), var(--orange));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.hero p {
+  color: var(--muted); font-size: 1.1rem;
+  max-width: 560px; margin: 0 auto 32px;
+}
+.stats-row { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+.stat { text-align: center; }
+.stat-num { font-size: 2rem; font-weight: 800; color: var(--accent2); }
+.stat-label { font-size: .8rem; color: var(--muted); margin-top: 2px; }
 
-    /* ── Main ── */
-    main { max-width: 1280px; margin: 0 auto; padding: 0 24px 80px; }
+/* ══ Main ══ */
+main { max-width: 1280px; margin: 0 auto; padding: 0 24px 80px; }
 
-    /* ── Category Nav ── */
-    .cat-nav {
-      display: flex; gap: 8px; flex-wrap: wrap; justify-content: center;
-      margin-bottom: 48px; position: sticky; top: 64px; z-index: 90;
-      background: var(--bg); padding: 16px 0;
-    }
-    .cat-btn {
-      padding: 7px 18px; border-radius: 50px;
-      background: var(--card); border: 1px solid var(--border);
-      color: var(--muted); font-size: .88rem; cursor: pointer;
-      transition: all var(--transition);
-    }
-    .cat-btn:hover, .cat-btn.active {
-      background: var(--accent); color: #fff;
-      border-color: var(--accent);
-    }
+/* ══ Category Nav ══ */
+.cat-nav {
+  display: flex; gap: 8px; flex-wrap: wrap; justify-content: center;
+  margin-bottom: 48px; position: sticky; top: 64px; z-index: 90;
+  background: var(--bg); padding: 16px 0;
+}
+.cat-btn {
+  padding: 7px 18px; border-radius: 50px;
+  background: var(--card); border: 1px solid var(--border);
+  color: var(--muted); font-size: .88rem; cursor: pointer;
+  transition: all var(--transition);
+}
+.cat-btn:hover, .cat-btn.active {
+  background: var(--accent); color: #fff; border-color: var(--accent);
+}
 
-    /* ── Section ── */
-    .section { margin-bottom: 56px; }
-    .section-title {
-      font-size: 1.3rem; font-weight: 700; margin-bottom: 20px;
-      display: flex; align-items: center; gap: 10px;
-    }
-    .section-title::before {
-      content: ''; display: block; width: 4px; height: 22px;
-      background: linear-gradient(180deg, var(--accent), var(--green));
-      border-radius: 4px;
-    }
-    .section-desc {
-      color: var(--muted); font-size: .88rem; margin-bottom: 20px;
-      margin-left: 14px;
-    }
+/* ══ Section ══ */
+.section { margin-bottom: 56px; }
+.section-title {
+  font-size: 1.3rem; font-weight: 700; margin-bottom: 20px;
+  display: flex; align-items: center; gap: 10px;
+}
+.section-title::before {
+  content: ''; display: block; width: 4px; height: 22px;
+  background: linear-gradient(180deg, var(--accent), var(--green));
+  border-radius: 4px;
+}
+.section-desc {
+  color: var(--muted); font-size: .88rem; margin-bottom: 20px; margin-left: 14px;
+}
 
-    /* ── Tool Grid ── */
-    .tool-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 16px;
-    }
-    .tool-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 22px;
-      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
-      cursor: pointer;
-      display: flex; flex-direction: column; gap: 12px;
-      position: relative; overflow: hidden;
-    }
-    .tool-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--accent), var(--green));
-      opacity: 0; transition: opacity var(--transition);
-    }
-    .tool-card:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow);
-      border-color: rgba(108,92,231,.4);
-    }
-    .tool-card:hover::before { opacity: 1; }
-    .card-top { display: flex; align-items: flex-start; gap: 14px; }
-    .tool-icon {
-      width: 48px; height: 48px; border-radius: 12px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.4rem; flex-shrink: 0;
-    }
-    .card-info { flex: 1; min-width: 0; }
-    .tool-name {
-      font-weight: 700; font-size: 1.05rem;
-      margin-bottom: 3px;
-    }
-    .tool-tagline {
-      font-size: .82rem; color: var(--muted);
-      display: -webkit-box; -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical; overflow: hidden;
-    }
-    .card-tags {
-      display: flex; gap: 6px; flex-wrap: wrap;
-    }
-    .tag {
-      padding: 2px 9px; border-radius: 50px;
-      font-size: .72rem; font-weight: 600;
-    }
-    .tag-free  { background: rgba(0,206,201,.12); color: var(--green); border: 1px solid rgba(0,206,201,.25); }
-    .tag-paid  { background: rgba(253,121,168,.12); color: var(--orange); border: 1px solid rgba(253,121,168,.25); }
-    .tag-freemium { background: rgba(255,234,167,.12); color: var(--yellow); border: 1px solid rgba(255,234,167,.25); }
-    .tag-hot   { background: rgba(108,92,231,.15); color: var(--accent2); border: 1px solid rgba(108,92,231,.3); }
-    .card-footer {
-      display: flex; align-items: center; justify-content: space-between;
-      padding-top: 12px; border-top: 1px solid var(--border);
-      margin-top: 4px;
-    }
-    .pricing {
-      font-size: .85rem; font-weight: 600;
-    }
-    .pricing.free  { color: var(--green); }
-    .pricing.paid  { color: var(--orange); }
-    .pricing.freemium { color: var(--yellow); }
-    .visit-btn {
-      font-size: .78rem; padding: 5px 14px;
-      background: var(--accent); color: #fff;
-      border-radius: 50px; font-weight: 600;
-      transition: background var(--transition);
-    }
-    .visit-btn:hover { background: var(--accent2); }
+/* ══ Tool Grid ══ */
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+.tool-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  cursor: pointer;
+  display: flex; flex-direction: column; gap: 12px;
+  position: relative; overflow: hidden;
+}
+.tool-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--green));
+  opacity: 0; transition: opacity var(--transition);
+}
+.tool-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+  border-color: rgba(108,92,231,.4);
+}
+.tool-card:hover::before { opacity: 1; }
+.card-top { display: flex; align-items: flex-start; gap: 14px; }
+.tool-icon {
+  width: 48px; height: 48px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem; flex-shrink: 0;
+}
+.card-info { flex: 1; min-width: 0; }
+.tool-name { font-weight: 700; font-size: 1.05rem; margin-bottom: 3px; }
+.tool-tagline {
+  font-size: .82rem; color: var(--muted);
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.card-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { padding: 2px 9px; border-radius: 50px; font-size: .72rem; font-weight: 600; }
+.tag-free  { background: rgba(0,206,201,.12); color: var(--green); border: 1px solid rgba(0,206,201,.25); }
+.tag-paid  { background: rgba(253,121,168,.12); color: var(--orange); border: 1px solid rgba(253,121,168,.25); }
+.tag-freemium { background: rgba(255,234,167,.12); color: var(--yellow); border: 1px solid rgba(255,234,167,.25); }
+.tag-hot   { background: rgba(108,92,231,.15); color: var(--accent2); border: 1px solid rgba(108,92,231,.3); }
+.card-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 12px; border-top: 1px solid var(--border); margin-top: 4px;
+}
+.pricing { font-size: .85rem; font-weight: 600; }
+.pricing.free { color: var(--green); }
+.pricing.paid { color: var(--orange); }
+.pricing.freemium { color: var(--yellow); }
+.visit-btn {
+  font-size: .78rem; padding: 5px 14px;
+  background: var(--accent); color: #fff;
+  border-radius: 50px; font-weight: 600;
+  transition: background var(--transition);
+}
+.visit-btn:hover { background: var(--accent2); }
 
-    /* ── New Banner ── */
-    .new-banner {
-      display: inline-flex; align-items: center; gap: 6px;
-      font-size: .7rem; padding: 2px 8px;
-      background: rgba(255,234,167,.1); color: var(--yellow);
-      border-radius: 50px; font-weight: 700;
-      position: absolute; top: 12px; right: 12px;
-    }
+.new-banner {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: .65rem; padding: 2px 7px;
+  background: rgba(255,234,167,.12); color: var(--yellow);
+  border-radius: 50px; font-weight: 700;
+  margin-left: 6px;
+}
 
-    /* ── Featured ── */
-    .featured-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 16px;
-    }
-    .featured-card {
-      background: linear-gradient(135deg, var(--card), var(--card2));
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 26px;
-      transition: all var(--transition);
-    }
-    .featured-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
-    .featured-rank {
-      font-size: .75rem; font-weight: 700; color: var(--accent);
-      text-transform: uppercase; letter-spacing: .08em; margin-bottom: 10px;
-    }
-    .featured-name { font-size: 1.15rem; font-weight: 800; margin-bottom: 6px; }
-    .featured-desc { font-size: .85rem; color: var(--muted); margin-bottom: 14px; }
-    .featured-link {
-      font-size: .85rem; color: var(--accent2); font-weight: 600;
-    }
+/* ══ Featured ══ */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+.featured-card {
+  background: linear-gradient(135deg, var(--card), var(--card2));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px;
+  transition: all var(--transition);
+}
+.featured-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.featured-rank { font-size: .75rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 10px; }
+.featured-name { font-size: 1.15rem; font-weight: 800; margin-bottom: 6px; }
+.featured-desc { font-size: .85rem; color: var(--muted); margin-bottom: 14px; }
+.featured-link { font-size: .85rem; color: var(--accent2); font-weight: 600; }
 
-    /* ── Footer ── */
-    footer {
-      text-align: center; padding: 36px 24px;
-      border-top: 1px solid var(--border);
-      color: var(--muted); font-size: .85rem;
-    }
-    footer a { color: var(--accent2); }
+/* ══ Skills Section ══ */
+.skill-card {
+  background: linear-gradient(135deg, rgba(108,92,231,.1), rgba(0,206,201,.05));
+  border: 1px solid rgba(108,92,231,.3);
+}
+.skill-card .card-top { align-items: center; }
+.skill-source {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: .7rem; padding: 2px 8px;
+  background: rgba(108,92,231,.15); color: var(--accent2);
+  border-radius: 4px; font-weight: 600;
+  margin-top: 4px;
+}
 
-    /* ── Toast ── */
-    .toast {
-      position: fixed; bottom: 24px; right: 24px; z-index: 999;
-      background: var(--card); border: 1px solid var(--accent);
-      border-radius: 12px; padding: 14px 20px;
-      box-shadow: var(--shadow);
-      transform: translateY(80px); opacity: 0;
-      transition: all .35s cubic-bezier(.4,0,.2,1);
-      max-width: 300px;
-    }
-    .toast.show { transform: translateY(0); opacity: 1; }
+/* ══ Footer ══ */
+footer {
+  text-align: center; padding: 36px 24px;
+  border-top: 1px solid var(--border);
+  color: var(--muted); font-size: .85rem;
+}
+footer a { color: var(--accent2); }
 
-    /* ── Responsive ── */
-    @media (max-width: 640px) {
-      .tool-grid, .featured-grid { grid-template-columns: 1fr; }
-      .stats-row { gap: 24px; }
-      .header-inner { height: 56px; }
-      .hero { padding: 48px 16px 36px; }
-    }
-  </style>
+/* ══ Toast ══ */
+.toast {
+  position: fixed; bottom: 24px; right: 24px; z-index: 999;
+  background: var(--card); border: 1px solid var(--accent);
+  border-radius: 12px; padding: 14px 20px;
+  box-shadow: var(--shadow);
+  transform: translateY(80px); opacity: 0;
+  transition: all .35s cubic-bezier(.4,0,.2,1);
+  max-width: 300px;
+}
+.toast.show { transform: translateY(0); opacity: 1; }
+
+/* ══ Responsive ══ */
+@media (max-width: 640px) {
+  .tool-grid, .featured-grid { grid-template-columns: 1fr; }
+  .stats-row { gap: 24px; }
+  .header-inner { height: 56px; }
+  .hero { padding: 48px 16px 36px; }
+}</style>
 </head>
 <body>
 
@@ -295,7 +279,7 @@
       <input type="text" id="searchInput" placeholder="搜索 AI 工具…" autocomplete="off" />
     </div>
     <div class="header-right">
-      <span class="badge-live">● 每日更新</span>
+      <span class="badge-live">📅 2026年5月24日 更新</span>
     </div>
   </div>
 </header>
@@ -305,9 +289,9 @@
   <h1>发现最适合你的<br><span>AI 工具箱</span></h1>
   <p>精心 curate 的 AI 工具导航站，覆盖写作、画图、代码、视频、数据分析等全品类，帮你省去筛选时间。</p>
   <div class="stats-row">
-    <div class="stat"><div class="stat-num" id="toolCount">78</div><div class="stat-label">收录工具</div></div>
-    <div class="stat"><div class="stat-num">9</div><div class="stat-label">工具分类</div></div>
-    <div class="stat"><div class="stat-num">100%</div><div class="stat-label">人工精筛</div></div>
+    <div class="stat"><div class="stat-num" id="toolCount">71</div><div class="stat-label">收录工具</div></div>
+    <div class="stat"><div class="stat-num">10</div><div class="stat-label">工具分类</div></div>
+    <div class="stat"><div class="stat-num">23%</div><div class="stat-label">完全免费</div></div>
   </div>
 </section>
 
@@ -317,15 +301,16 @@
   <!-- Category Nav -->
   <nav class="cat-nav" id="catNav">
     <button class="cat-btn active" data-cat="all">🔥 全部</button>
-    <button class="cat-btn" data-cat="chat">💬 聊天</button>
-    <button class="cat-btn" data-cat="write">✍️ 写作</button>
-    <button class="cat-btn" data-cat="image">🎨 画图</button>
-    <button class="cat-btn" data-cat="code">💻 代码</button>
-    <button class="cat-btn" data-cat="video">🎬 视频</button>
-    <button class="cat-btn" data-cat="audio">🎵 音频</button>
-    <button class="cat-btn" data-cat="data">📊 数据</button>
-    <button class="cat-btn" data-cat="productivity">📁 办公</button>
-    <button class="cat-btn" data-cat="search">🔍 搜索</button>
+    <button class="cat-btn" data-cat="chat">💬 AI 聊天</button>
+    <button class="cat-btn" data-cat="write">✍️ AI 写作</button>
+    <button class="cat-btn" data-cat="image">🎨 AI 画图</button>
+    <button class="cat-btn" data-cat="code">💻 AI 编程</button>
+    <button class="cat-btn" data-cat="video">🎬 AI 视频</button>
+    <button class="cat-btn" data-cat="audio">🎵 AI 音频</button>
+    <button class="cat-btn" data-cat="data">📊 AI 数据</button>
+    <button class="cat-btn" data-cat="productivity">📁 AI 办公</button>
+    <button class="cat-btn" data-cat="search">🔍 AI 搜索</button>
+    <button class="cat-btn" data-cat="skill">🧠 技能专区</button>
   </nav>
 
   <!-- Featured -->
@@ -333,56 +318,50 @@
     <div class="section-title">🏆 今日精选</div>
     <div class="featured-grid">
       <div class="featured-card" data-cat="chat">
-        <div class="featured-rank">No.1 本周热门</div>
+        <div class="featured-rank">本周热门</div>
         <div class="featured-name">ChatGPT</div>
-        <div class="featured-desc">OpenAI 出品，最强的通用 AI 助手。支持 GPT-4o、文件上传、联网搜索、代码解释器，几乎无所不能。</div>
-        <span class="featured-link">→ chatgpt.com</span>
+        <div class="featured-desc">OpenAI 最强通用助手，支持 GPT-4o、联网搜索、文件分析</div>
+        <span class="featured-link">→ https://chatgpt.com</span>
       </div>
       <div class="featured-card" data-cat="image">
-        <div class="featured-rank">No.2 画图之王</div>
+        <div class="featured-rank">画图之王</div>
         <div class="featured-name">Midjourney</div>
-        <div class="featured-desc">目前艺术感最强的 AI 画图工具，适合设计师、艺术家、创意工作者，出图质量无可挑剔。</div>
-        <span class="featured-link">→ midjourney.com</span>
+        <div class="featured-desc">艺术感天花板 AI 画图工具，V6 模型出图质量业界标杆</div>
+        <span class="featured-link">→ https://midjourney.com</span>
       </div>
       <div class="featured-card" data-cat="code">
-        <div class="featured-rank">No.3 程序员的 AI 搭档</div>
+        <div class="featured-rank">程序员的 AI 搭档</div>
         <div class="featured-name">GitHub Copilot</div>
-        <div class="featured-desc">你的 AI 结对编程伙伴，实时代码补全、函数生成、bug 修复，支持几乎所有主流语言。</div>
-        <span class="featured-link">→ github.com/features/copilot</span>
+        <div class="featured-desc">最成熟的 AI 编程助手，实时代码补全，支持 30+ 语言</div>
+        <span class="featured-link">→ https://github.com/features/copilot</span>
       </div>
       <div class="featured-card" data-cat="video">
-        <div class="featured-rank">No.4 视频新星</div>
+        <div class="featured-rank">视频新星</div>
         <div class="featured-name">Runway ML</div>
-        <div class="featured-desc">AI 视频编辑 + 生成双引擎。文字生成视频、视频风格转换、智能抠图，影视级效果。</div>
-        <span class="featured-link">→ runway.ml</span>
+        <div class="featured-desc">AI 视频编辑 + 生成双引擎，文字转视频，影视级效果</div>
+        <span class="featured-link">→ https://runway.ml</span>
       </div>
     </div>
   </section>
 
-  <!-- 🗣 Chat -->
   <section class="section" data-section="chat">
     <div class="section-title">💬 AI 聊天</div>
-    <p class="section-desc">智能对话、问答、助手——你的 24/7 AI 伙伴</p>
+    <p class="section-desc">11 个工具</p>
     <div class="tool-grid">
-
       <div class="tool-card" data-cat="chat" data-name="chatgpt">
         <div class="card-top">
-          <div class="tool-icon">🤖</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#6c5ce7,#a29bfe)">🤖</div>
           <div class="card-info">
-            <div class="tool-name">ChatGPT <span class="new-banner">NEW</span></div>
+            <div class="tool-name">ChatGPT</div>
             <div class="tool-tagline">OpenAI 最强通用助手，支持 GPT-4o、联网搜索、文件分析</div>
           </div>
         </div>
-        <div class="card-tags">
-          <span class="tag tag-hot">🔥 热门</span>
-          <span class="tag tag-freemium">Freemium</span>
-        </div>
+        <div class="card-tags"><span class="tag tag-hot">热门</span><span class="tag tag-freemium">Freemium</span></div>
         <div class="card-footer">
           <span class="pricing freemium">免费版可用</span>
           <a href="https://chatgpt.com" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="chat" data-name="claude">
         <div class="card-top">
           <div class="tool-icon" style="background:linear-gradient(135deg,#d97706,#f59e0b)">🧠</div>
@@ -391,16 +370,12 @@
             <div class="tool-tagline">Anthropic 出品，超长上下文（200K），擅长深度分析、写作和代码</div>
           </div>
         </div>
-        <div class="card-tags">
-          <span class="tag tag-hot">🔥 热门</span>
-          <span class="tag tag-freemium">Freemium</span>
-        </div>
+        <div class="card-tags"><span class="tag tag-hot">热门</span><span class="tag tag-freemium">Freemium</span></div>
         <div class="card-footer">
           <span class="pricing freemium">免费版可用</span>
           <a href="https://claude.ai" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="chat" data-name="gemini">
         <div class="card-top">
           <div class="tool-icon" style="background:linear-gradient(135deg,#4285f4,#34a853,#ea4335,#fbbc05)">✨</div>
@@ -409,188 +384,164 @@
             <div class="tool-tagline">Google 出品，深度整合搜索，免费 Pro 版，支持多模态输入</div>
           </div>
         </div>
-        <div class="card-tags">
-          <span class="tag tag-freemium">Freemium</span>
-          <span class="tag tag-free">免费</span>
-        </div>
+        <div class="card-tags"><span class="tag tag-free">免费</span></div>
         <div class="card-footer">
           <span class="pricing free">完全免费</span>
           <a href="https://gemini.google.com" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="chat" data-name="perplexity">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#20b2aa,#00ced1)">🔍</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">💡</div>
           <div class="card-info">
-            <div class="tool-name">Perplexity AI</div>
-            <div class="tool-tagline">AI 搜索引擎，给出答案并附上来源引用，做研究的神器</div>
+            <div class="tool-name">Perplexity</div>
+            <div class="tool-tagline">AI 搜索引擎，给出答案的同时附上来源引用，做研究的神器</div>
           </div>
         </div>
-        <div class="card-tags">
-          <span class="tag tag-hot">🔥 热门</span>
-          <span class="tag tag-freemium">Freemium</span>
-        </div>
+        <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
         <div class="card-footer">
           <span class="pricing freemium">免费版可用</span>
-          <a href="https://www.perplexity.ai" target="_blank" class="visit-btn">立即使用 →</a>
+          <a href="https://perplexity.ai" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="chat" data-name="grok">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#1a1a2e,#6c5ce7)">🦾</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#1da1f2,#0d8ecf)">🚀</div>
           <div class="card-info">
             <div class="tool-name">Grok</div>
-            <div class="tool-tagline">马斯克 xAI 出品，风格辛辣幽默，接入 X 实时信息</div>
-          </div>
-        </div>
-        <div class="card-tags">
-          <span class="tag tag-paid">付费</span>
-        </div>
-        <div class="card-footer">
-          <span class="pricing paid">$8/月</span>
-          <a href="https://grok.com" target="_blank" class="visit-btn">立即使用 →</a>
-        </div>
-      </div>
-
-      <div class="tool-card" data-cat="chat" data-name="deepseek">
-        <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#0066ff,#00d4ff)">🌊</div>
-          <div class="card-info">
-            <div class="tool-name">DeepSeek</div>
-            <div class="tool-tagline">国产之光，推理能力极强，深度搜索 R1 爆炸级开源</div>
-          </div>
-        </div>
-        <div class="card-tags">
-          <span class="tag tag-hot">🔥 热门</span>
-          <span class="tag tag-free">免费</span>
-        </div>
-        <div class="card-footer">
-          <span class="pricing free">完全免费</span>
-          <a href="https://chat.deepseek.com" target="_blank" class="visit-btn">立即使用 →</a>
-        </div>
-      </div>
-
-    
-      <div class="tool-card" data-cat="chat" data-name="doubao">
-        <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#4caf50,#8bc34a)">🌰</div>
-          <div class="card-info">
-            <div class="tool-name">doubao</div>
-            <div class="tool-tagline">字节跳动出品，中文理解能力强，免费使用，支持联网搜索</div>
-          </div>
-        </div>
-        <div class="card-tags"><span class="tag tag-free">免费</span></div>
-        <div class="card-footer">
-          <span class="pricing free">免费</span>
-          <a href="https://www.doubao.com" target="_blank" class="visit-btn">立即使用 →</a>
-        </div>
-      </div>
-
-      <div class="tool-card" data-cat="chat" data-name="yi">
-        <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#2196f3,#03a9f4)">🧊</div>
-          <div class="card-info">
-            <div class="tool-name">yi</div>
-            <div class="tool-tagline">零一万物出品，支持 200 万 token 上下文，处理长文档无敌</div>
-          </div>
-        </div>
-        <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
-        <div class="card-footer">
-          <span class="pricing freemium">免费版可用</span>
-          <a href="https://chat.01.ai" target="_blank" class="visit-btn">立即使用 →</a>
-        </div>
-      </div>
-
-      <div class="tool-card" data-cat="chat" data-name="qwen">
-        <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#9c27b0,#e91e63)">🔮</div>
-          <div class="card-info">
-            <div class="tool-name">qwen</div>
-            <div class="tool-tagline">阿里通义千问，通义万相/通义千问一体化，中文场景优化</div>
-          </div>
-        </div>
-        <div class="card-tags"><span class="tag tag-free">免费</span></div>
-        <div class="card-footer">
-          <span class="pricing free">免费</span>
-          <a href="https://tongyi.aliyun.com" target="_blank" class="visit-btn">立即使用 →</a>
-        </div>
-      </div>
-
-      <div class="tool-card" data-cat="chat" data-name="poe">
-        <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#795548,#a1887f)">📮</div>
-          <div class="card-info">
-            <div class="tool-name">poe</div>
-            <div class="tool-tagline">Quora 出品，一个平台聚合所有 AI 模型，切换自如</div>
-          </div>
-        </div>
-        <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
-        <div class="card-footer">
-          <span class="pricing freemium">免费版可用</span>
-          <a href="https://poe.com" target="_blank" class="visit-btn">立即使用 →</a>
-        </div>
-      </div>
-
-      <div class="tool-card" data-cat="chat" data-name="huggingchat">
-        <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#ff9800,#ffc107)">🤗</div>
-          <div class="card-info">
-            <div class="tool-name">huggingchat</div>
-            <div class="tool-tagline">Hugging Face 开源聊天，可切换各种开源模型，免费无限制</div>
-          </div>
-        </div>
-        <div class="card-tags"><span class="tag tag-free">免费</span></div>
-        <div class="card-footer">
-          <span class="pricing free">免费</span>
-          <a href="https://huggingface.co/chat" target="_blank" class="visit-btn">立即使用 →</a>
-        </div>
-      </div></div>
-  </section>
-
-  <!-- ✍️ Writing -->
-  <section class="section" data-section="write">
-    <div class="section-title">✍️ AI 写作</div>
-    <p class="section-desc">文案、文章、邮件、社媒——用 AI 秒速产出高质量文字</p>
-    <div class="tool-grid">
-
-      <div class="tool-card" data-cat="write" data-name="copy-ai">
-        <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#6c5ce7,#e17055)">📝</div>
-          <div class="card-info">
-            <div class="tool-name">Copy.ai</div>
-            <div class="tool-tagline">营销文案神器，一键生成广告语、社媒帖、邮件模板、SEO 内容</div>
-          </div>
-        </div>
-        <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
-        <div class="card-footer">
-          <span class="pricing freemium">免费版可用</span>
-          <a href="https://www.copy.ai" target="_blank" class="visit-btn">立即使用 →</a>
-        </div>
-      </div>
-
-      <div class="tool-card" data-cat="write" data-name="jasper">
-        <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#e84393,#fd79a8)">🖊️</div>
-          <div class="card-info">
-            <div class="tool-name">Jasper AI</div>
-            <div class="tool-tagline">企业级 AI 写作平台，支持品牌声音定制，营销团队首选</div>
+            <div class="tool-tagline">xAI 出品，风格大胆有趣，实时接入 X 平台数据</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-paid">付费</span></div>
         <div class="card-footer">
-          <span class="pricing paid">$39/月起</span>
+          <span class="pricing paid">$8/月起</span>
+          <a href="https://grok.x.ai" target="_blank" class="visit-btn">立即使用 →</a>
+        </div>
+      </div>
+      <div class="tool-card" data-cat="chat" data-name="deepseek">
+        <div class="card-top">
+          <div class="tool-icon" style="background:linear-gradient(135deg,#1e3a5f,#00bcd4)">🔥</div>
+          <div class="card-info">
+            <div class="tool-name">DeepSeek</div>
+            <div class="tool-tagline">国产 AI 之光，推理能力超强，完全免费，中文理解拉满</div>
+          </div>
+        </div>
+        <div class="card-tags"><span class="tag tag-free">免费</span><span class="tag tag-freemium">国产</span></div>
+        <div class="card-footer">
+          <span class="pricing free">完全免费</span>
+          <a href="https://deepseek.com" target="_blank" class="visit-btn">立即使用 →</a>
+        </div>
+      </div>
+      <div class="tool-card" data-cat="chat" data-name="doubao">
+        <div class="card-top">
+          <div class="tool-icon" style="background:linear-gradient(135deg,#00b42a,#27ae60)">🫘</div>
+          <div class="card-info">
+            <div class="tool-name">豆包</div>
+            <div class="tool-tagline">字节跳动出品，免费中文 AI 助手，适合日常对话和写作辅助</div>
+          </div>
+        </div>
+        <div class="card-tags"><span class="tag tag-free">免费</span><span class="tag tag-freemium">国产</span></div>
+        <div class="card-footer">
+          <span class="pricing free">完全免费</span>
+          <a href="https://doubao.com" target="_blank" class="visit-btn">立即使用 →</a>
+        </div>
+      </div>
+      <div class="tool-card" data-cat="chat" data-name="yi">
+        <div class="card-top">
+          <div class="tool-icon" style="background:linear-gradient(135deg,#ff6a00,#ff9933)">💬</div>
+          <div class="card-info">
+            <div class="tool-name">通义千问</div>
+            <div class="tool-tagline">阿里出品，免费中文大模型，支持联网搜索和长文档分析</div>
+          </div>
+        </div>
+        <div class="card-tags"><span class="tag tag-free">免费</span><span class="tag tag-freemium">国产</span></div>
+        <div class="card-footer">
+          <span class="pricing free">免费版可用</span>
+          <a href="https://tongyi.aliyun.com" target="_blank" class="visit-btn">立即使用 →</a>
+        </div>
+      </div>
+      <div class="tool-card" data-cat="chat" data-name="qwen">
+        <div class="card-top">
+          <div class="tool-icon" style="background:linear-gradient(135deg,#ff6a00,#f7931e)">🌟</div>
+          <div class="card-info">
+            <div class="tool-name">Qwen</div>
+            <div class="tool-tagline">阿里开源大模型系列，支持多种任务和部署方式</div>
+          </div>
+        </div>
+        <div class="card-tags"><span class="tag tag-free">免费</span><span class="tag tag-free">开源</span></div>
+        <div class="card-footer">
+          <span class="pricing free">开源免费</span>
+          <a href="https://qwenlm.github.io" target="_blank" class="visit-btn">立即使用 →</a>
+        </div>
+      </div>
+      <div class="tool-card" data-cat="chat" data-name="poe">
+        <div class="card-top">
+          <div class="tool-icon" style="background:linear-gradient(135deg,#7c3aed,#a78bfa)">🎭</div>
+          <div class="card-info">
+            <div class="tool-name">Poe</div>
+            <div class="tool-tagline">一个 App 使用多个 AI 模型（GPT-4/Claude/Gemini 等）</div>
+          </div>
+        </div>
+        <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
+        <div class="card-footer">
+          <span class="pricing freemium">Freemium</span>
+          <a href="https://poe.com" target="_blank" class="visit-btn">立即使用 →</a>
+        </div>
+      </div>
+      <div class="tool-card" data-cat="chat" data-name="huggingchat">
+        <div class="card-top">
+          <div class="tool-icon" style="background:linear-gradient(135deg,#ff9a00,#ffcd00)">🤗</div>
+          <div class="card-info">
+            <div class="tool-name">HuggingChat</div>
+            <div class="tool-tagline">Hugging Face 出品的开源聊天界面，可切换各种开源模型</div>
+          </div>
+        </div>
+        <div class="card-tags"><span class="tag tag-free">免费</span><span class="tag tag-free">开源</span></div>
+        <div class="card-footer">
+          <span class="pricing free">完全免费</span>
+          <a href="https://huggingface.co/chat" target="_blank" class="visit-btn">立即使用 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" data-section="write">
+    <div class="section-title">✍️ AI 写作</div>
+    <p class="section-desc">8 个工具</p>
+    <div class="tool-grid">
+      <div class="tool-card" data-cat="write" data-name="copy-ai">
+        <div class="card-top">
+          <div class="tool-icon" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">✍️</div>
+          <div class="card-info">
+            <div class="tool-name">Copy.ai</div>
+            <div class="tool-tagline">营销文案神器，一键生成广告语、社媒帖、邮件模板</div>
+          </div>
+        </div>
+        <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
+        <div class="card-footer">
+          <span class="pricing freemium">免费版可用</span>
+          <a href="https://copy.ai" target="_blank" class="visit-btn">立即使用 →</a>
+        </div>
+      </div>
+      <div class="tool-card" data-cat="write" data-name="jasper">
+        <div class="card-top">
+          <div class="tool-icon" style="background:linear-gradient(135deg,#1a1a2e,#e94560)">📝</div>
+          <div class="card-info">
+            <div class="tool-name">Jasper</div>
+            <div class="tool-tagline">企业级 AI 写作平台，营销内容、博客、广告文案全覆盖</div>
+          </div>
+        </div>
+        <div class="card-tags"><span class="tag tag-paid">付费</span></div>
+        <div class="card-footer">
+          <span class="pricing paid">$49/月起</span>
           <a href="https://jasper.ai" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="write" data-name="notion-ai">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#fff,#e8e8f0)">📓</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#000000,#7f8c8d)">📒</div>
           <div class="card-info">
             <div class="tool-name">Notion AI</div>
-            <div class="tool-tagline">Notion 内置 AI，写作、总结、翻译、脑暴一体化知识管理</div>
+            <div class="tool-tagline">知识管理 + AI 写作一体，写笔记时 AI 自动帮你总结扩写</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
@@ -599,13 +550,12 @@
           <a href="https://notion.so/product/ai" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="write" data-name="writesonic">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#00b894,#55efc4)">🎯</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#0ea5e9,#38bdf8)">🌊</div>
           <div class="card-info">
             <div class="tool-name">Writesonic</div>
-            <div class="tool-tagline">性价比之王，博客、广告、产品描述一网打尽，免费额度多</div>
+            <div class="tool-tagline">AI 写作 + SEO 优化一体，自动生成高排名博客和落地页</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
@@ -614,44 +564,40 @@
           <a href="https://writesonic.com" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
-    
       <div class="tool-card" data-cat="write" data-name="quillbot">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#009688,#4caf50)">🪶</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#14b8a6,#06b6d4)">🪶</div>
           <div class="card-info">
-            <div class="tool-name">quillbot</div>
-            <div class="tool-tagline">AI 改写润色神器，学术论文、英文写作、 paraphrasing 必备</div>
+            <div class="tool-name">QuillBot</div>
+            <div class="tool-tagline">AI 改写润色工具，支持 40+ 语言，学术写作必备</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
         <div class="card-footer">
-          <span class="pricing freemium">Freemium</span>
+          <span class="pricing freemium">免费版可用</span>
           <a href="https://quillbot.com" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="write" data-name="wordtune">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#673ab7,#9c27b0)">🎵</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#3b82f6,#60a5fa)">🎯</div>
           <div class="card-info">
-            <div class="tool-name">wordtune</div>
-            <div class="tool-tagline">实时改写句子，提供多种表达方式，Chrome 插件可用</div>
+            <div class="tool-name">Wordtune</div>
+            <div class="tool-tagline">AI 改写和润色，让表达更精准自然，支持英文和中文</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
         <div class="card-footer">
-          <span class="pricing freemium">Freemium</span>
+          <span class="pricing freemium">免费版可用</span>
           <a href="https://wordtune.com" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="write" data-name="rytr">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#00bcd4,#26c6da)">✒️</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#f97316,#fb923c)">⚡</div>
           <div class="card-info">
-            <div class="tool-name">rytr</div>
-            <div class="tool-tagline">超低价 AI 写作工具，博客、邮件、社媒帖一键生成</div>
+            <div class="tool-name">Rytr</div>
+            <div class="tool-tagline">超便宜的 AI 写作工具，适合小团队和独立创作者</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
@@ -660,80 +606,74 @@
           <a href="https://rytr.me" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="write" data-name="sudowrite">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#3f51b5,#5c6bc0)">📖</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#ec4899,#f472b6)">📖</div>
           <div class="card-info">
-            <div class="tool-name">sudowrite</div>
-            <div class="tool-tagline">专为小说/故事创作设计的 AI 写作助手，支持剧情续写</div>
+            <div class="tool-name">Sudowrite</div>
+            <div class="tool-tagline">专门为小说和创意写作打造的 AI 工具</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-paid">付费</span></div>
         <div class="card-footer">
-          <span class="pricing paid">付费</span>
+          <span class="pricing paid">$19/月起</span>
           <a href="https://sudowrite.com" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
-      </div></div>
+      </div>
+    </div>
   </section>
-
-  <!-- 🎨 Image -->
   <section class="section" data-section="image">
     <div class="section-title">🎨 AI 画图</div>
-    <p class="section-desc">文字转图片、风格迁移、照片修复——创意设计新纪元</p>
+    <p class="section-desc">8 个工具</p>
     <div class="tool-grid">
-
       <div class="tool-card" data-cat="image" data-name="midjourney">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#1a1a2e,#6c5ce7,#a29bfe)">🎭</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#6c5ce7,#a29bfe)">🎨</div>
           <div class="card-info">
-            <div class="tool-name">Midjourney <span class="new-banner">HOT</span></div>
-            <div class="tool-tagline">艺术感天花板，设计师首选，V6 模型出图质量业界标杆</div>
+            <div class="tool-name">Midjourney</div>
+            <div class="tool-tagline">艺术感天花板 AI 画图工具，V6 模型出图质量业界标杆</div>
           </div>
         </div>
-        <div class="card-tags"><span class="tag tag-hot">🔥 最热</span><span class="tag tag-paid">付费</span></div>
+        <div class="card-tags"><span class="tag tag-hot">热门</span><span class="tag tag-paid">付费</span></div>
         <div class="card-footer">
           <span class="pricing paid">$10/月起</span>
           <a href="https://midjourney.com" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="image" data-name="dalle">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#10b981,#059669)">🖼️</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#10a37f,#1de9b6)">🖼️</div>
           <div class="card-info">
             <div class="tool-name">DALL·E 3</div>
-            <div class="tool-tagline">OpenAI 出品，理解力强，与 ChatGPT 深度整合，细节准确</div>
+            <div class="tool-tagline">OpenAI 出品，与 ChatGPT 无缝集成，描述越详细出图越精准</div>
           </div>
         </div>
-        <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
+        <div class="card-tags"><span class="tag tag-paid">付费</span></div>
         <div class="card-footer">
-          <span class="pricing freemium">Plus 可用</span>
+          <span class="pricing paid">含在 Plus 中</span>
           <a href="https://openai.com/dall-e-3" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="image" data-name="stable-diffusion">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#ff6b6b,#ee5a24)">🎨</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#ff6b35,#f7931e)">🌀</div>
           <div class="card-info">
             <div class="tool-name">Stable Diffusion</div>
-            <div class="tool-tagline">开源免费，可本地部署，自定义程度极高，LoRA 生态丰富</div>
+            <div class="tool-tagline">开源免费 AI 画图引擎，可本地部署，无限可能性</div>
           </div>
         </div>
-        <div class="card-tags"><span class="tag tag-free">免费开源</span></div>
+        <div class="card-tags"><span class="tag tag-free">免费</span><span class="tag tag-free">开源</span></div>
         <div class="card-footer">
-          <span class="pricing free">免费开源</span>
+          <span class="pricing free">开源免费</span>
           <a href="https://stability.ai" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="image" data-name="leonardo">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#a29bfe,#6c5ce7)">🦁</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#4f46e5,#818cf8)">🦁</div>
           <div class="card-info">
             <div class="tool-name">Leonardo AI</div>
-            <div class="tool-tagline">游戏/动漫风格画图专家，支持 ControlNet，像素风/插画风出彩</div>
+            <div class="tool-tagline">专注游戏/动漫风格的 AI 画图平台，风格控制超强</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
@@ -742,29 +682,26 @@
           <a href="https://leonardo.ai" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
-    
       <div class="tool-card" data-cat="image" data-name="dall-e">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#10b981,#059669)">🖼️</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#74b9ff,#0984e3)">🎭</div>
           <div class="card-info">
-            <div class="tool-name">dall-e</div>
-            <div class="tool-tagline">OpenAI 出品，理解力强，与 ChatGPT 深度整合，细节准确</div>
+            <div class="tool-name">DALL·E 2</div>
+            <div class="tool-tagline">OpenAI 第二代图像生成模型，适合创意插画和概念图</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
         <div class="card-footer">
-          <span class="pricing freemium">Plus 可用</span>
-          <a href="https://openai.com/dall-e-3" target="_blank" class="visit-btn">立即使用 →</a>
+          <span class="pricing freemium">免费额度</span>
+          <a href="https://openai.com/dall-e-2" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="image" data-name="ideogram">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#e91e63,#f48fb1)">🎭</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#a855f7,#c084fc)">💎</div>
           <div class="card-info">
-            <div class="tool-name">ideogram</div>
-            <div class="tool-tagline">文字排版能力最强的 AI 画图工具，海报/Logo/UI 设计首选</div>
+            <div class="tool-name">Ideogram</div>
+            <div class="tool-tagline">文字排版能力最强的 AI 画图工具，适合做海报和设计图</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
@@ -773,126 +710,116 @@
           <a href="https://ideogram.ai" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="image" data-name="flux">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#00bcd4,#00e5ff)">🌊</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#1a1a2e,#4f46e5)">💥</div>
           <div class="card-info">
-            <div class="tool-name">flux</div>
-            <div class="tool-tagline">开源免费，黑森林 Labs 出品，图像质量超越 Midjourney V5</div>
+            <div class="tool-name">Flux</div>
+            <div class="tool-tagline">黑森林 Labs 出品，开源免费，图像质量超越 Midjourney V5</div>
           </div>
         </div>
-        <div class="card-tags"><span class="tag tag-free">免费</span></div>
+        <div class="card-tags"><span class="tag tag-free">免费</span><span class="tag tag-free">开源</span></div>
         <div class="card-footer">
-          <span class="pricing free">免费开源</span>
+          <span class="pricing free">完全免费开源</span>
           <a href="https://blackforestlabs.ai" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="image" data-name="recraft">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#ff5722,#ff9800)">🎯</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#f97316,#eab308)">📐</div>
           <div class="card-info">
-            <div class="tool-name">recraft</div>
-            <div class="tool-tagline">矢量图 AI 生成，支持 SVG 导出，设计师工作流神器</div>
+            <div class="tool-name">Recraft</div>
+            <div class="tool-tagline">专业矢量图 + 品牌设计 AI，支持 SVG 导出</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
         <div class="card-footer">
           <span class="pricing freemium">免费版可用</span>
-          <a href="https://www.recraft.ai" target="_blank" class="visit-btn">立即使用 →</a>
+          <a href="https://recraft.ai" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
-      </div></div>
+      </div>
+    </div>
   </section>
-
-  <!-- 💻 Code -->
   <section class="section" data-section="code">
     <div class="section-title">💻 AI 编程</div>
-    <p class="section-desc">AI 结对编程、代码生成、自动重构——程序员效率提升神器</p>
+    <p class="section-desc">8 个工具</p>
     <div class="tool-grid">
-
       <div class="tool-card" data-cat="code" data-name="copilot">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#333,#555)">⚡</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#24292e,#586069)">⚡</div>
           <div class="card-info">
             <div class="tool-name">GitHub Copilot</div>
-            <div class="tool-tagline">最成熟的 AI 编程助手，实时代码补全，支持 30+ 语言，IDE 深度整合</div>
+            <div class="tool-tagline">最成熟的 AI 编程助手，实时代码补全，支持 30+ 语言</div>
           </div>
         </div>
-        <div class="card-tags"><span class="tag tag-hot">🔥 热门</span><span class="tag tag-freemium">Freemium</span></div>
+        <div class="card-tags"><span class="tag tag-hot">热门</span><span class="tag tag-paid">付费</span></div>
         <div class="card-footer">
-          <span class="pricing freemium">学生免费</span>
+          <span class="pricing paid">$10/月起</span>
           <a href="https://github.com/features/copilot" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="code" data-name="cursor">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#000,#333)">🖥️</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#1a1a2e,#00d084)">🖱️</div>
           <div class="card-info">
             <div class="tool-name">Cursor</div>
-            <div class="tool-tagline">AI 原生代码编辑器，Ctrl+K 对话式编程，代码理解能力极强</div>
+            <div class="tool-tagline">AI 原生代码编辑器，Ctrl+K 对话式编程，今年最火开发工具</div>
           </div>
         </div>
-        <div class="card-tags"><span class="tag tag-hot">🔥 热门</span><span class="tag tag-freemium">Freemium</span></div>
+        <div class="card-tags"><span class="tag tag-hot">热门</span><span class="tag tag-freemium">Freemium</span></div>
         <div class="card-footer">
           <span class="pricing freemium">免费版可用</span>
           <a href="https://cursor.sh" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="code" data-name="aider">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#0f0f1a,#6c5ce7)">🤖</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#0d7377,#14a085)">🦾</div>
           <div class="card-info">
             <div class="tool-name">Aider</div>
-            <div class="tool-tagline">终端里的 AI 结对编程，支持多文件同时编辑，git 集成</div>
+            <div class="tool-tagline">终端里的 AI 结对编程，支持多文件同时编辑，完全免费开源</div>
           </div>
         </div>
-        <div class="card-tags"><span class="tag tag-free">免费开源</span></div>
+        <div class="card-tags"><span class="tag tag-free">免费</span><span class="tag tag-free">开源</span></div>
         <div class="card-footer">
-          <span class="pricing free">免费开源</span>
+          <span class="pricing free">完全免费开源</span>
           <a href="https://aider.chat" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="code" data-name="continue">
         <div class="card-top">
           <div class="tool-icon" style="background:linear-gradient(135deg,#2563eb,#3b82f6)">🔗</div>
           <div class="card-info">
             <div class="tool-name">Continue</div>
-            <div class="tool-tagline">开源 VS Code / JetBrains AI 插件，支持自定义模型和代码库索引</div>
+            <div class="tool-tagline">开源 VS Code / JetBrains AI 插件，支持自定义模型</div>
           </div>
         </div>
-        <div class="card-tags"><span class="tag tag-free">免费开源</span></div>
+        <div class="card-tags"><span class="tag tag-free">免费</span><span class="tag tag-free">开源</span></div>
         <div class="card-footer">
-          <span class="pricing free">免费开源</span>
+          <span class="pricing free">开源免费</span>
           <a href="https://continue.dev" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
-    
       <div class="tool-card" data-cat="code" data-name="codeium">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#00bcd4,#00e5ff)">⚛️</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#00bcd4,#00e5ff)">⚡</div>
           <div class="card-info">
-            <div class="tool-name">codeium</div>
-            <div class="tool-tagline">完全免费的 AI 编程助手，比 Copilot 更快，支持 70+ 语言</div>
+            <div class="tool-name">Codeium</div>
+            <div class="tool-tagline">100% 免费的 Copilot 替代品，速度比 Copilot 更快</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-free">免费</span></div>
         <div class="card-footer">
-          <span class="pricing free">免费</span>
+          <span class="pricing free">100%免费</span>
           <a href="https://codeium.com" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="code" data-name="tabnine">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#2196f3,#0d47a1)">🔷</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#f59e0b,#fbbf24)">🔒</div>
           <div class="card-info">
-            <div class="tool-name">tabnine</div>
-            <div class="tool-tagline">AI 代码补全，支持本地部署，隐私保护极强</div>
+            <div class="tool-name">Tabnine</div>
+            <div class="tool-tagline">AI 代码补全，支持本地部署，代码绝不流出企业</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
@@ -901,12 +828,11 @@
           <a href="https://tabnine.com" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="code" data-name="replit">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#1a1a2e,#6c5ce7)">🌀</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#f26207,#ff6b35)">🌐</div>
           <div class="card-info">
-            <div class="tool-name">replit</div>
+            <div class="tool-name">Replit</div>
             <div class="tool-tagline">在线 IDE + AI 结对编程，浏览器里写代码，一键部署上线</div>
           </div>
         </div>
@@ -916,13 +842,12 @@
           <a href="https://replit.com" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="code" data-name="bolt">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#000,#555)">⚡</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#3b82f6,#8b5cf6)">⚡</div>
           <div class="card-info">
-            <div class="tool-name">bolt</div>
-            <div class="tool-tagline">一句话生成完整全栈 App，从想法到上线只需几分钟</div>
+            <div class="tool-name">Bolt</div>
+            <div class="tool-tagline">一句话生成完整全栈 App，从想法到上线只要几分钟</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
@@ -930,51 +855,47 @@
           <span class="pricing freemium">免费版可用</span>
           <a href="https://bolt.new" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
-      </div></div>
+      </div>
+    </div>
   </section>
-
-  <!-- 🎬 Video -->
   <section class="section" data-section="video">
     <div class="section-title">🎬 AI 视频</div>
-    <p class="section-desc">文字生成视频、数字人、视频翻译——影视级效果触手可及</p>
+    <p class="section-desc">8 个工具</p>
     <div class="tool-grid">
-
       <div class="tool-card" data-cat="video" data-name="runway">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#7c3aed,#a78bfa)">🎥</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">🎬</div>
           <div class="card-info">
-            <div class="tool-name">Runway ML <span class="new-banner">HOT</span></div>
-            <div class="tool-tagline">Gen-3 视频生成天花板，文字/图片转视频，视频编辑一整套</div>
+            <div class="tool-name">Runway ML</div>
+            <div class="tool-tagline">AI 视频编辑 + 生成双引擎，文字转视频，影视级效果</div>
           </div>
         </div>
-        <div class="card-tags"><span class="tag tag-hot">🔥 最热</span><span class="tag tag-freemium">Freemium</span></div>
+        <div class="card-tags"><span class="tag tag-hot">热门</span><span class="tag tag-freemium">Freemium</span></div>
         <div class="card-footer">
           <span class="pricing freemium">免费版可用</span>
           <a href="https://runway.ml" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="video" data-name="sora">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#10b981,#6ee7b7)">🌀</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#10a37f,#00d084)">🌅</div>
           <div class="card-info">
             <div class="tool-name">Sora</div>
-            <div class="tool-tagline">OpenAI 文生视频终极形态，60秒连贯视频，物理世界模拟能力惊人</div>
+            <div class="tool-tagline">OpenAI 出品 AI 视频生成，文字/图片直接转高质量视频</div>
           </div>
         </div>
-        <div class="card-tags"><span class="tag tag-hot">🔥 最热</span><span class="tag tag-paid">付费</span></div>
+        <div class="card-tags"><span class="tag tag-paid">付费</span></div>
         <div class="card-footer">
-          <span class="pricing paid">ChatGPT Pro</span>
+          <span class="pricing paid">Plus 用户</span>
           <a href="https://openai.com/sora" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="video" data-name="pika">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#ec4899,#f472b6)">🌸</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#ec4899,#f472b6)">🎥</div>
           <div class="card-info">
             <div class="tool-name">Pika Labs</div>
-            <div class="tool-tagline">简单易用的 AI 视频生成，Discord / Web 都能用，适合新手</div>
+            <div class="tool-tagline">简单好用的 AI 视频生成工具，Discord 即可使用</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
@@ -983,29 +904,26 @@
           <a href="https://pika.art" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="video" data-name="heygen">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#f59e0b,#fbbf24)">👤</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#3b82f6,#60a5fa)">🧑‍💻</div>
           <div class="card-info">
             <div class="tool-name">HeyGen</div>
-            <div class="tool-tagline">数字人视频生成，克隆你的声音和形象，一键制作多语言视频</div>
+            <div class="tool-tagline">AI 数字人视频，克隆你的声音和形象，1 分钟生成视频</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
         <div class="card-footer">
-          <span class="pricing freemium">免费1分钟</span>
+          <span class="pricing freemium">免费版可用</span>
           <a href="https://heygen.com" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
-    
       <div class="tool-card" data-cat="video" data-name="luma">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#e91e63,#ff5722)">🎥</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#8b5cf6,#a78bfa)">🔮</div>
           <div class="card-info">
-            <div class="tool-name">luma</div>
-            <div class="tool-tagline">AI 3D 场景生成 + 视频生成，NeRF 技术实现电影级效果</div>
+            <div class="tool-name">Luma AI</div>
+            <div class="tool-tagline">AI 3D 视频和场景重建，支持文本生成 3D 效果</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
@@ -1014,95 +932,88 @@
           <a href="https://lumalabs.ai" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="video" data-name="kaiber">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#673ab7,#512da8)">🌌</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#ef4444,#f97316)">🎵</div>
           <div class="card-info">
-            <div class="tool-name">kaiber</div>
-            <div class="tool-tagline">音乐 + 视频同步生成，AI 音乐MV制作神器</div>
+            <div class="tool-name">Kaiber</div>
+            <div class="tool-tagline">AI 音乐视频生成器，将音乐转换为精美视觉内容</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
         <div class="card-footer">
-          <span class="pricing freemium">Freemium</span>
+          <span class="pricing freemium">免费版可用</span>
           <a href="https://kaiber.ai" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="video" data-name="synthesia">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#ff9800,#ffc107)">🕺</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#06b6d4,#67e8f9)">🎤</div>
           <div class="card-info">
-            <div class="tool-name">synthesia</div>
-            <div class="tool-tagline">企业级 AI 数字人视频，输入文字自动生成讲解视频</div>
+            <div class="tool-name">Synthesia</div>
+            <div class="tool-tagline">企业级 AI 数字人视频平台，支持 120+ 语言</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-paid">付费</span></div>
         <div class="card-footer">
-          <span class="pricing paid">付费</span>
-          <a href="https://www.synthesia.io" target="_blank" class="visit-btn">立即使用 →</a>
+          <span class="pricing paid">$22/月起</span>
+          <a href="https://synthesia.io" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="video" data-name="capcut">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#00bcd4,#26c6da)">✂️</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#000000,#434343)">✂️</div>
           <div class="card-info">
-            <div class="tool-name">capcut</div>
-            <div class="tool-tagline">剪映 AI 版，自动字幕、AI 配音、智能剪辑，免费够用</div>
+            <div class="tool-name">剪映</div>
+            <div class="tool-tagline">免费 AI 视频剪辑神器，自动字幕、配音、智能剪辑</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-free">免费</span></div>
         <div class="card-footer">
-          <span class="pricing free">免费</span>
-          <a href="https://www.capcut.com" target="_blank" class="visit-btn">立即使用 →</a>
+          <span class="pricing free">完全免费</span>
+          <a href="https://capcut.com" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
-      </div></div>
+      </div>
+    </div>
   </section>
-
-  <!-- 🎵 Audio -->
   <section class="section" data-section="audio">
     <div class="section-title">🎵 AI 音频</div>
-    <p class="section-desc">AI 配音、音乐生成、语音克隆——音频创作全面 AI 化</p>
+    <p class="section-desc">6 个工具</p>
     <div class="tool-grid">
-
       <div class="tool-card" data-cat="audio" data-name="elevenlabs">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#1a1a2e,#6c5ce7)">🗣️</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#6c5ce7,#a29bfe)">🗣️</div>
           <div class="card-info">
-            <div class="tool-name">ElevenLabs <span class="new-banner">HOT</span></div>
-            <div class="tool-tagline">AI 语音合成天花板，声音克隆只需 1 分钟录音，情感表现力拉满</div>
+            <div class="tool-name">ElevenLabs</div>
+            <div class="tool-tagline">AI 声音克隆天花板，1 分钟录音即可克隆你的声音</div>
           </div>
         </div>
-        <div class="card-tags"><span class="tag tag-hot">🔥 最热</span><span class="tag tag-freemium">Freemium</span></div>
+        <div class="card-tags"><span class="tag tag-hot">热门</span><span class="tag tag-freemium">Freemium</span></div>
         <div class="card-footer">
           <span class="pricing freemium">免费版可用</span>
           <a href="https://elevenlabs.io" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="audio" data-name="suno">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#f97316,#fbbf24)">🎸</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#f97316,#fbbf24)">🎶</div>
           <div class="card-info">
             <div class="tool-name">Suno AI</div>
-            <div class="tool-tagline">文字生成完整歌曲，带人声、乐器、编曲，一键出完整音乐作品</div>
+            <div class="tool-tagline">文字生成完整歌曲，带人声、乐器、编曲，一键出歌</div>
           </div>
         </div>
-        <div class="card-tags"><span class="tag tag-hot">🔥 热门</span><span class="tag tag-freemium">Freemium</span></div>
+        <div class="card-tags"><span class="tag tag-hot">热门</span><span class="tag tag-freemium">Freemium</span></div>
         <div class="card-footer">
           <span class="pricing freemium">免费版可用</span>
-          <a href="https://suno.ai" target="_blank" class="visit-btn">立即使用 →</a>
+          <a href="https://suno.com" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="audio" data-name="murf">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#3b82f6,#60a5fa)">🎤</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#0ea5e9,#38bdf8)">🎤</div>
           <div class="card-info">
             <div class="tool-name">Murf AI</div>
-            <div class="tool-tagline">企业级 AI 配音平台，120+ 语言，视频配音、有声书、广告配音</div>
+            <div class="tool-tagline">专业 AI 配音工具，120+ 语音可选，适合视频和课程</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
@@ -1111,14 +1022,12 @@
           <a href="https://murf.ai" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
-    
       <div class="tool-card" data-cat="audio" data-name="play">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#e91e63,#f48fb1)">🎶</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#10b981,#34d399)">🎧</div>
           <div class="card-info">
-            <div class="tool-name">play</div>
-            <div class="tool-tagline">AI 音乐 + 语音生成平台，支持自定义风格和音色</div>
+            <div class="tool-name">Play.ht</div>
+            <div class="tool-tagline">AI 文字转语音，超拟人声音，适合播客和有声书</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
@@ -1127,50 +1036,46 @@
           <a href="https://play.ht" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="audio" data-name="resemble">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#9c27b0,#ce93d8)">🔊</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#f43f5e,#fb7185)">🔊</div>
           <div class="card-info">
-            <div class="tool-name">resemble</div>
-            <div class="tool-tagline">AI 声音克隆 + 实时语音合成，支持情绪和语调控制</div>
-          </div>
-        </div>
-        <div class="card-tags"><span class="tag tag-paid">付费</span></div>
-        <div class="card-footer">
-          <span class="pricing paid">付费</span>
-          <a href="https://www.resemble.ai" target="_blank" class="visit-btn">立即使用 →</a>
-        </div>
-      </div>
-
-      <div class="tool-card" data-cat="audio" data-name="audiostack">
-        <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#ff5722,#ff9800)">🎛️</div>
-          <div class="card-info">
-            <div class="tool-name">audiostack</div>
-            <div class="tool-tagline">AI 音频制作工作室，播客、广告、有声书一站式完成</div>
+            <div class="tool-name">Resemble</div>
+            <div class="tool-tagline">企业级 AI 声音克隆平台，支持实时语音转换</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
         <div class="card-footer">
-          <span class="pricing freemium">Freemium</span>
-          <a href="https://www.audiostack.co" target="_blank" class="visit-btn">立即使用 →</a>
+          <span class="pricing freemium">免费额度</span>
+          <a href="https://resemble.ai" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
-      </div></div>
+      </div>
+      <div class="tool-card" data-cat="audio" data-name="audiostack">
+        <div class="card-top">
+          <div class="tool-icon" style="background:linear-gradient(135deg,#8b5cf6,#a78bfa)">🎼</div>
+          <div class="card-info">
+            <div class="tool-name">Audiostack</div>
+            <div class="tool-tagline">AI 音频制作平台，从脚本到成品声音一步到位</div>
+          </div>
+        </div>
+        <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
+        <div class="card-footer">
+          <span class="pricing freemium">免费版可用</span>
+          <a href="https://audiostack.co" target="_blank" class="visit-btn">立即使用 →</a>
+        </div>
+      </div>
+    </div>
   </section>
-
-  <!-- 📊 Data -->
   <section class="section" data-section="data">
-    <div class="section-title">📊 AI 数据分析</div>
-    <p class="section-desc">自然语言查询数据、自动可视化、智能报告——告别 Excel 繁琐操作</p>
+    <div class="section-title">📊 AI 数据</div>
+    <p class="section-desc">6 个工具</p>
     <div class="tool-grid">
-
       <div class="tool-card" data-cat="data" data-name="julius">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#10b981,#34d399)">📈</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#06b6d4,#67e8f9)">📊</div>
           <div class="card-info">
             <div class="tool-name">Julius AI</div>
-            <div class="tool-tagline">像聊天一样分析数据，上传 Excel/CSV，AI 自动可视化并解读结果</div>
+            <div class="tool-tagline">上传 Excel/CSV，用自然语言提问分析数据，秒出图表</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
@@ -1179,44 +1084,40 @@
           <a href="https://julius.ai" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="data" data-name="chatcsv">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#3b82f6,#8b5cf6)">🗂️</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#22c55e,#4ade80)">📈</div>
           <div class="card-info">
             <div class="tool-name">ChatCSV</div>
-            <div class="tool-tagline">上传 CSV 文件，用自然语言提问，秒出图表和分析结论</div>
+            <div class="tool-tagline">上传 CSV 直接用 AI 对话分析数据，不需要学 SQL</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
         <div class="card-footer">
           <span class="pricing freemium">免费版可用</span>
-          <a href="https://chatcsv.net" target="_blank" class="visit-btn">立即使用 →</a>
+          <a href="https://chatcsv.co" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="data" data-name="tableau-ai">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#e11d48,#fb7185)">🗃️</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#e97132,#f4a261)">📉</div>
           <div class="card-info">
             <div class="tool-name">Tableau AI</div>
-            <div class="tool-tagline">Salesforce 旗下，AI 驱动商业智能平台，企业级数据可视化</div>
+            <div class="tool-tagline">Tableau 内置 AI 分析，自然语言转可视化图表</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-paid">付费</span></div>
         <div class="card-footer">
-          <span class="pricing paid">$70/用户/月</span>
-          <a href="https://tableau.com" target="_blank" class="visit-btn">立即使用 →</a>
+          <span class="pricing paid">付费</span>
+          <a href="https://tableau.com/products/ai" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
-    
       <div class="tool-card" data-cat="data" data-name="rows">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#4caf50,#8bc34a)">📊</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#0ea5e9,#7dd3fc)">📋</div>
           <div class="card-info">
-            <div class="tool-name">rows</div>
-            <div class="tool-tagline">AI 原生电子表格，用自然语言操作数据，自动生成图表</div>
+            <div class="tool-name">Rows</div>
+            <div class="tool-tagline">AI 原生电子表格，内置 AI 分析、预测和可视化</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
@@ -1225,13 +1126,12 @@
           <a href="https://rows.com" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="data" data-name="hex">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#2196f3,#03a9f4)">🔢</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#6366f1,#818cf8)">🔢</div>
           <div class="card-info">
-            <div class="tool-name">hex</div>
-            <div class="tool-tagline">AI 驱动的现代数据分析工具，Notebook + SQL + 可视化一体</div>
+            <div class="tool-name">Hex</div>
+            <div class="tool-tagline">协作式数据分析 + AI，团队数据工作流现代化</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
@@ -1240,80 +1140,74 @@
           <a href="https://hex.tech" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="data" data-name="thoughtspot">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#ff9800,#ffc107)">💡</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#8b5cf6,#c4b5fd)">🔍</div>
           <div class="card-info">
-            <div class="tool-name">thoughtspot</div>
-            <div class="tool-tagline">AI 驱动的搜索式分析平台，业务人员也能做数据分析</div>
+            <div class="tool-name">ThoughtSpot</div>
+            <div class="tool-tagline">AI 驱动的搜索式分析平台，自然语言查询数据</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-paid">付费</span></div>
         <div class="card-footer">
-          <span class="pricing paid">付费</span>
-          <a href="https://www.thoughtspot.com" target="_blank" class="visit-btn">立即使用 →</a>
+          <span class="pricing paid">企业版</span>
+          <a href="https://thoughtspot.com" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
-      </div></div>
+      </div>
+    </div>
   </section>
-
-  <!-- 📁 Productivity -->
   <section class="section" data-section="productivity">
-    <div class="section-title">📁 AI 办公效率</div>
-    <p class="section-desc">文档、会议、邮件、日程——全流程 AI 辅助提效</p>
+    <div class="section-title">📁 AI 办公</div>
+    <p class="section-desc">9 个工具</p>
     <div class="tool-grid">
-
       <div class="tool-card" data-cat="productivity" data-name="copilot-microsoft">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#0078d4,#00bcf2)">📘</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#0078d4,#50e6ff)">🪟</div>
           <div class="card-info">
             <div class="tool-name">Microsoft Copilot</div>
-            <div class="tool-tagline">Office 全家桶 AI 化，Word/Excel/PowerPoint/Outlook 全面升级</div>
+            <div class="tool-tagline">微软全家桶 AI 助手，嵌入 Office / Windows / Edge</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
         <div class="card-footer">
-          <span class="pricing freemium">$20/月</span>
+          <span class="pricing freemium">免费版可用</span>
           <a href="https://copilot.microsoft.com" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="productivity" data-name="gemini-workspace">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#4285f4,#34a853,#ea4335)">🔗</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#4285f4,#34a853,#ea4335,#fbbc05)">🗂️</div>
           <div class="card-info">
             <div class="tool-name">Gemini for Workspace</div>
-            <div class="tool-tagline">Gmail、Docs、Sheets、Slides 全部 AI 赋能，最良心的价格</div>
+            <div class="tool-tagline">Google  Workspace AI 助手，Docs/Sheets/Slides 全覆盖</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
         <div class="card-footer">
-          <span class="pricing freemium">$7/月起</span>
+          <span class="pricing freemium">$20/用户/月</span>
           <a href="https://workspace.google.com/gemini" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="productivity" data-name="gamma">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#6c5ce7,#a29bfe)">🎨</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#6366f1,#a78bfa)">🎯</div>
           <div class="card-info">
             <div class="tool-name">Gamma</div>
-            <div class="tool-tagline">AI 一键生成 PPT/文档/网页，模板精美，告别排版烦恼</div>
+            <div class="tool-tagline">AI 一键生成 PPT/文档/网页，告别排版烦恼</div>
           </div>
         </div>
-        <div class="card-tags"><span class="tag tag-hot">🔥 热门</span><span class="tag tag-freemium">Freemium</span></div>
+        <div class="card-tags"><span class="tag tag-hot">热门</span><span class="tag tag-freemium">Freemium</span></div>
         <div class="card-footer">
           <span class="pricing freemium">免费版可用</span>
           <a href="https://gamma.app" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="productivity" data-name="granola">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#f97316,#fbbf24)">📝</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#f59e0b,#fbbf24)">🥣</div>
           <div class="card-info">
             <div class="tool-name">Granola</div>
-            <div class="tool-tagline">AI 会议记录工具，后台静默录音，自动生成笔记 + 纪要 + 待办</div>
+            <div class="tool-tagline">AI 会议纪要神器，自动录音转写+总结，开会必备</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
@@ -1322,13 +1216,12 @@
           <a href="https://granola.ai" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="productivity" data-name="reclaim">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#8b5cf6,#a78bfa)">⏰</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#10b981,#34d399)">📅</div>
           <div class="card-info">
-            <div class="tool-name">Reclaim AI</div>
-            <div class="tool-tagline">AI 自动排程，智能保护专注时间、会议时间、私人时间</div>
+            <div class="tool-name">Reclaim</div>
+            <div class="tool-tagline">AI 日历管理，自动优化日程，帮你找回专注时间</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
@@ -1337,29 +1230,26 @@
           <a href="https://reclaim.ai" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
-    
       <div class="tool-card" data-cat="productivity" data-name="todoist">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#e91e63,#f44336)">✅</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#e74c3c,#c0392b)">✅</div>
           <div class="card-info">
-            <div class="tool-name">todoist</div>
-            <div class="tool-tagline">AI 智能任务管理，自动分类和排期，效率达人必备</div>
+            <div class="tool-name">Todoist</div>
+            <div class="tool-tagline">AI 加持的任务管理工具，智能排序和安排你的待办事项</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
         <div class="card-footer">
-          <span class="pricing freemium">Freemium</span>
+          <span class="pricing freemium">免费版可用</span>
           <a href="https://todoist.com" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="productivity" data-name="mem">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#00bcd4,#26c6da)">🧠</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#8b5cf6,#a78bfa)">🧠</div>
           <div class="card-info">
-            <div class="tool-name">mem</div>
-            <div class="tool-tagline">AI 知识管理工具，自动整理笔记，智能关联和搜索</div>
+            <div class="tool-name">Mem</div>
+            <div class="tool-tagline">AI 驱动的笔记工具，自动整理和关联你的笔记</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
@@ -1368,28 +1258,26 @@
           <a href="https://mem.ai" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="productivity" data-name="taskade">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#9c27b0,#ce93d8)">📋</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#00bcd4,#26c6da)">📋</div>
           <div class="card-info">
-            <div class="tool-name">taskade</div>
-            <div class="tool-tagline">AI 驱动的团队协作与项目管理，任务清单 + 知识库一体</div>
+            <div class="tool-name">Taskade</div>
+            <div class="tool-tagline">AI 工作流 + 项目管理，团队协作和自动化一体</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
         <div class="card-footer">
           <span class="pricing freemium">免费版可用</span>
-          <a href="https://www.taskade.com" target="_blank" class="visit-btn">立即使用 →</a>
+          <a href="https://taskade.com" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="productivity" data-name="fireflies">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#ff5722,#ff9800)">🔥</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#f97316,#fb923c)">🔥</div>
           <div class="card-info">
-            <div class="tool-name">fireflies</div>
-            <div class="tool-tagline">AI 会议记录 + 智能摘要，自动转写和分析会议内容</div>
+            <div class="tool-name">Fireflies.ai</div>
+            <div class="tool-tagline">AI 会议记录+智能摘要，自动转写和分析 Zoom/Teams 会议</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
@@ -1397,30 +1285,27 @@
           <span class="pricing freemium">免费版可用</span>
           <a href="https://fireflies.ai" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
-      </div></div>
+      </div>
+    </div>
   </section>
-
-  <!-- 🔍 Search -->
   <section class="section" data-section="search">
     <div class="section-title">🔍 AI 搜索</div>
-    <p class="section-desc">新一代搜索引擎，AI 直接给出答案而非链接列表</p>
+    <p class="section-desc">6 个工具</p>
     <div class="tool-grid">
-
       <div class="tool-card" data-cat="search" data-name="perplexity2">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#20b2aa,#00ced1)">💡</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">🔍</div>
           <div class="card-info">
-            <div class="tool-name">Perplexity AI</div>
-            <div class="tool-tagline">AI 搜索引擎先驱，给出结构化答案 + 引用来源，支持文件上传深度分析</div>
+            <div class="tool-name">Perplexity</div>
+            <div class="tool-tagline">AI 搜索引擎，给答案的同时附上来源引用，做研究必备</div>
           </div>
         </div>
-        <div class="card-tags"><span class="tag tag-hot">🔥 热门</span><span class="tag tag-freemium">Freemium</span></div>
+        <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
         <div class="card-footer">
           <span class="pricing freemium">免费版可用</span>
-          <a href="https://www.perplexity.ai" target="_blank" class="visit-btn">立即使用 →</a>
+          <a href="https://perplexity.ai" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="search" data-name="you">
         <div class="card-top">
           <div class="tool-icon" style="background:linear-gradient(135deg,#ff6b35,#f7931e)">🔦</div>
@@ -1435,13 +1320,12 @@
           <a href="https://you.com" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="search" data-name="consensus">
         <div class="card-top">
           <div class="tool-icon" style="background:linear-gradient(135deg,#0ea5e9,#38bdf8)">📄</div>
           <div class="card-info">
             <div class="tool-name">Consensus</div>
-            <div class="tool-tagline">AI 学术搜索引擎，搜论文 + AI 总结 + 可信度评分，科研必备</div>
+            <div class="tool-tagline">学术论文 AI 搜索引擎，从 2 亿+ 论文中直接给答案</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-freemium">Freemium</span></div>
@@ -1450,52 +1334,35 @@
           <a href="https://consensus.app" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
-    
       <div class="tool-card" data-cat="search" data-name="devv">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#3f51b5,#5c6bc0)">🔎</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#1e1e2e,#313244)">👨‍💻</div>
           <div class="card-info">
-            <div class="tool-name">devv</div>
-            <div class="tool-tagline">专为开发者设计的 AI 搜索引擎，编程问题秒出答案</div>
+            <div class="tool-name">Devv</div>
+            <div class="tool-tagline">专为开发者打造的 AI 搜索引擎，代码优先搜索体验</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-free">免费</span></div>
         <div class="card-footer">
-          <span class="pricing free">免费</span>
+          <span class="pricing free">完全免费</span>
           <a href="https://devv.ai" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
       <div class="tool-card" data-cat="search" data-name="phind">
         <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#00bcd4,#00e5ff)">🔭</div>
+          <div class="tool-icon" style="background:linear-gradient(135deg,#5b21b6,#7c3aed)">🔎</div>
           <div class="card-info">
-            <div class="tool-name">phind</div>
-            <div class="tool-tagline">面向程序员的 AI 搜索引擎，技术文档精准检索</div>
+            <div class="tool-name">Phind</div>
+            <div class="tool-tagline">AI 开发者搜索引擎，回答编程问题附可执行代码</div>
           </div>
         </div>
         <div class="card-tags"><span class="tag tag-free">免费</span></div>
         <div class="card-footer">
-          <span class="pricing free">免费</span>
-          <a href="https://www.phind.com" target="_blank" class="visit-btn">立即使用 →</a>
+          <span class="pricing free">完全免费</span>
+          <a href="https://phind.com" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
-
-      <div class="tool-card" data-cat="search" data-name="ebook-finder">
-        <div class="card-top">
-          <div class="tool-icon" style="background:linear-gradient(135deg,#f97316,#fbbf24)">📚</div>
-          <div class="card-info">
-            <div class="tool-name">Ebook Finder</div>
-            <div class="tool-tagline">AI 驱动的电子书搜索工具，自动搜索 Z-Library / LibGen / 安娜的档案等主流免费书库，支持 PDF / EPUB / MOBI 下载</div>
-          </div>
-        </div>
-        <div class="card-tags"><span class="tag tag-free">免费</span><span class="tag tag-open-source">Open Source</span></div>
-        <div class="card-footer">
-          <span class="pricing free">完全免费</span>
-          <a href="https://github.com/winfy-88/ai-tools-hub" target="_blank" class="visit-btn">技能文件 →</a>
-        </div>
-      </div></div>
+      <div class="tool-card" data-cat="search" data-name="komo">
         <div class="card-top">
           <div class="tool-icon" style="background:linear-gradient(135deg,#4caf50,#8bc34a)">💎</div>
           <div class="card-info">
@@ -1505,10 +1372,31 @@
         </div>
         <div class="card-tags"><span class="tag tag-free">免费</span></div>
         <div class="card-footer">
-          <span class="pricing free">免费</span>
+          <span class="pricing free">完全免费</span>
           <a href="https://komo.ai" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
-      </div></div>
+      </div>
+    </div>
+  </section>
+  <section class="section" data-section="skill">
+    <div class="section-title">🧠 技能专区</div>
+    <p class="section-desc">1 个工具</p>
+    <div class="tool-grid">
+      <div class="tool-card skill-card" data-cat="skill" data-name="ebook-finder">
+        <div class="card-top">
+          <div class="tool-icon" style="background:linear-gradient(135deg,#f97316,#fbbf24)">📚</div>
+          <div class="card-info">
+            <div class="tool-name">Ebook Finder<span class="new-banner">🆕 NEW</span></div>
+            <div class="tool-tagline">AI 驱动的电子书搜索技能，自动搜索 Z-Library / LibGen / 安娜的档案等主流免费书库，支持 PDF / EPUB / MOBI 下载</div>
+          </div>
+        </div>
+        <div class="card-tags"><span class="tag tag-free">免费</span><span class="tag tag-freemium">Open Source</span></div>
+        <div class="card-footer">
+          <span class="pricing free">完全免费</span>
+          <a href="https://github.com/winfy-88/ai-tools-hub" target="_blank" class="visit-btn">立即使用 →</a>
+        </div>
+      </div>
+    </div>
   </section>
 
 </main>
@@ -1516,102 +1404,48 @@
 <!-- ══ Footer ══ -->
 <footer>
   <p>🤖 <strong>AI Tools Hub</strong> — 每天帮你发现最好的 AI 工具</p>
-  <p style="margin-top:8px">本站内容每日更新，<a href="#">提交新工具</a> · <a href="#">RSS 订阅</a></p>
-  <p style="margin-top:8px;opacity:.5">© 2025 AI Tools Hub. Made with 💜 by AI.</p>
+  <p style="margin-top:8px">本站内容每日自动更新 · <a href="https://github.com/winfy-88/ai-tools-hub" target="_blank">GitHub</a> · <a href="https://winfy-88.github.io/ai-tools-hub/">在线访问</a></p>
+  <p style="margin-top:8px;opacity:.5">上次更新：2026年5月24日 · Generated from tools.json v2.0</p>
 </footer>
-
-<!-- ══ Toast ══ -->
-<div class="toast" id="toast"></div>
 
 <!-- ══ Script ══ -->
 <script>
-// ── Count tools ──
-document.addEventListener('DOMContentLoaded', () => {
-  const cards = document.querySelectorAll('.tool-card');
-  document.getElementById('toolCount').textContent = cards.length;
-});
-
 // ── Category filter ──
-const catNav = document.getElementById('catNav');
-const sections = document.querySelectorAll('.section[data-section]');
-const featuredCards = document.querySelectorAll('.featured-card');
-
-catNav.addEventListener('click', (e) => {
-  const btn = e.target.closest('.cat-btn');
-  if (!btn) return;
-  // toggle active
-  catNav.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  const cat = btn.dataset.cat;
-  // filter sections
-  sections.forEach(sec => {
-    const cards = sec.querySelectorAll('.tool-card');
-    let visible = false;
-    cards.forEach(c => {
-      const show = cat === 'all' || c.dataset.cat === cat;
-      c.style.display = show ? '' : 'none';
-      if (show) visible = true;
-    });
-    sec.style.display = visible ? '' : 'none';
-  });
-  // filter featured
-  featuredCards.forEach(c => {
-    const show = cat === 'all' || c.dataset.cat === cat;
-    c.style.display = show ? '' : 'none';
-  });
-});
-
-// ── Search ──
-const searchInput = document.getElementById('searchInput');
-searchInput.addEventListener('input', (e) => {
-  const q = e.target.value.toLowerCase().trim();
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.cat-btn');
+  const cards = document.querySelectorAll('.tool-card, .featured-card');
   const sections = document.querySelectorAll('.section[data-section]');
-  sections.forEach(sec => {
-    const cards = sec.querySelectorAll('.tool-card');
-    let visible = false;
-    cards.forEach(c => {
-      const match = !q || c.dataset.name.includes(q) || c.querySelector('.tool-name').textContent.toLowerCase().includes(q) || c.querySelector('.tool-tagline').textContent.toLowerCase().includes(q);
-      c.style.display = match ? '' : 'none';
-      if (match) visible = true;
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cat = btn.dataset.cat;
+
+      if (cat === 'all') {
+        cards.forEach(c => c.style.display = '');
+        sections.forEach(s => s.style.display = '');
+      } else {
+        cards.forEach(c => c.style.display = c.dataset.cat === cat ? '' : 'none');
+        sections.forEach(s => s.style.display = s.dataset.section === cat ? '' : 'none');
+      }
     });
-    sec.style.display = visible ? '' : 'none';
   });
-  featuredCards.forEach(c => {
-    const match = !q || c.dataset.cat.includes(q) || c.querySelector('.featured-name').textContent.toLowerCase().includes(q);
-    c.style.display = match ? '' : 'none';
+
+  // ── Search ──
+  const searchInput = document.getElementById('searchInput');
+  searchInput.addEventListener('input', () => {
+    const q = searchInput.value.toLowerCase().trim();
+    if (!q) { cards.forEach(c => c.style.display = ''); return; }
+    cards.forEach(c => {
+      const name = (c.dataset.name || '').toLowerCase();
+      const tagline = (c.querySelector('.tool-tagline')?.textContent || '').toLowerCase();
+      c.style.display = (name.includes(q) || tagline.includes(q)) ? '' : 'none';
+    });
   });
-});
 
-// ── Toast helper ──
-function showToast(msg) {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 2800);
-}
-
-// ── Card click ──
-document.querySelectorAll('.visit-btn').forEach(btn => {
-  btn.addEventListener('click', e => {
-    e.stopPropagation();
-  });
-});
-
-// ── Intersection Observer (fade-in) ──
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-    }
-  });
-}, { threshold: 0.08 });
-
-document.querySelectorAll('.tool-card, .featured-card, .section').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = 'opacity .5s ease, transform .5s ease';
-  observer.observe(el);
+  // ── Tool count ──
+  document.getElementById('toolCount').textContent = cards.length;
 });
 </script>
 </body>

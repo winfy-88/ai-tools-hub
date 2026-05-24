@@ -1,0 +1,82 @@
+name: Daily Update
+
+on:
+  schedule:
+    # 每天 UTC 08:00 运行（北京时间 16:00）
+    - cron: '0 8 * * *'
+  workflow_dispatch: # 支持手动触发
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  fetch-and-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch new tools
+        run: |
+          node scripts/fetch-new-tools.js --json new-tools.json
+
+      - name: Check for new tools
+        id: check
+        run: |
+          if [ -f new-tools.json ] && [ -s new-tools.json ]; then
+            echo "has_new=true" >> $GITHUB_OUTPUT
+            echo "Found new tools, see new-tools.json"
+          else
+            echo "has_new=false" >> $GITHUB_OUTPUT
+            echo "No new tools found today."
+          fi
+
+      - name: Generate index.html
+        run: |
+          node scripts/generate-index.js -o index.html
+
+      - name: Update CHANGELOG
+        if: steps.check.outputs.has_new == 'true'
+        run: |
+          DATE=$(date +%Y-%m-%d)
+          echo "" >> CHANGELOG.md
+          echo "## ${DATE}" >> CHANGELOG.md
+          echo "" >> CHANGELOG.md
+          echo "### 新增工具" >> CHANGELOG.md
+          echo "" >> CHANGELOG.md
+          node -e "
+            const d = JSON.parse(require('fs').readFileSync('new-tools.json','utf8'));
+            d.newTools.forEach(t => {
+              console.log('- **' + t.name + '** - [' + t.suggestedCat + '] ' + t.url);
+            });
+          " >> CHANGELOG.md
+          echo "" >> CHANGELOG.md
+          echo "来源: " >> CHANGELOG.md
+          echo "- Product Hunt" >> CHANGELOG.md
+          echo "- GitHub Search" >> CHANGELOG.md
+          echo "- Hacker News" >> CHANGELOG.md
+
+      - name: Commit & Push
+        run: |
+          git config user.name "winfy-bot"
+          git config user.email "wfy_1988@163.com"
+          git add index.html CHANGELOG.md tools.json new-tools.json 2>/dev/null || true
+          git add index.html CHANGELOG.md 2>/dev/null || true
+          git diff --cached --quiet && echo "Nothing changed" || git commit -m "daily: update tools index [$(date +%Y-%m-%d)]"
+          git push
+
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          keep_files: true
