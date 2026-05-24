@@ -1,0 +1,145 @@
+{
+  "date": "2026-05-24",
+  "sources": [
+    "producthunt",
+    "github",
+    "hackernews"
+  ],
+  "newTools": [
+    {
+      "name": "browser-use",
+      "url": "https://github.com/browser-use/browser-use",
+      "tagline": "🌐 Make websites accessible for AI agents. Automate tasks online with ease.",
+      "source": "github",
+      "suggestedCat": "all",
+      "addedDate": "2026-05-24",
+      "new": true
+    },
+    {
+      "name": "cc-switch",
+      "url": "https://github.com/farion1231/cc-switch",
+      "tagline": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Gemini CLI & Hermes Agent. Only official website: ccswitch.io",
+      "source": "github",
+      "suggestedCat": "chat",
+      "addedDate": "2026-05-24",
+      "new": true
+    },
+    {
+      "name": "prompt-optimizer",
+      "url": "https://github.com/linshenkx/prompt-optimizer",
+      "tagline": "An AI prompt optimizer for writing better prompts and getting better AI results.",
+      "source": "github",
+      "suggestedCat": "all",
+      "addedDate": "2026-05-24",
+      "new": true
+    },
+    {
+      "name": "openclaude",
+      "url": "https://github.com/Gitlawb/openclaude",
+      "tagline": "runs anywhere. uses anything",
+      "source": "github",
+      "suggestedCat": "all",
+      "addedDate": "2026-05-24",
+      "new": true
+    },
+    {
+      "name": "nocobase",
+      "url": "https://github.com/nocobase/nocobase",
+      "tagline": "NocoBase is an open-source AI + no-code platform for building business systems fast. Instead of generating everything from scratch, AI works on top of production-proven infrastructure and a WYSIWYG no-code interface, so you get both speed and reliability.",
+      "source": "github",
+      "suggestedCat": "code",
+      "addedDate": "2026-05-24",
+      "new": true
+    },
+    {
+      "name": "Adobe's new image rotation tool is one of the most impressive AI tools seen",
+      "url": "https://www.creativebloq.com/design/adobes-new-image-rotation-tool-is-one-of-the-most-impressive-ai-concepts-weve-seen",
+      "tagline": "",
+      "source": "hackernews",
+      "suggestedCat": "image",
+      "addedDate": "2026-05-24",
+      "new": true
+    },
+    {
+      "name": "Reverse engineering a $1B Legal AI tool exposed 100k+ confidential files",
+      "url": "https://alexschapiro.com/security/vulnerability/2025/12/02/filevine-api-100k",
+      "tagline": "",
+      "source": "hackernews",
+      "suggestedCat": "all",
+      "addedDate": "2026-05-24",
+      "new": true
+    },
+    {
+      "name": "AI tooling must be disclosed for contributions",
+      "url": "https://github.com/ghostty-org/ghostty/pull/8289",
+      "tagline": "",
+      "source": "hackernews",
+      "suggestedCat": "all",
+      "addedDate": "2026-05-24",
+      "new": true
+    },
+    {
+      "name": "AI tools are spotting errors in research papers",
+      "url": "https://www.nature.com/articles/d41586-025-00648-5",
+      "tagline": "",
+      "source": "hackernews",
+      "suggestedCat": "search",
+      "addedDate": "2026-05-24",
+      "new": true
+    },
+    {
+      "name": "Potential issues in curl found using AI assisted tools",
+      "url": "https://mastodon.social/@bagder/115241241075258997",
+      "tagline": "",
+      "source": "hackernews",
+      "suggestedCat": "all",
+      "addedDate": "2026-05-24",
+      "new": true
+    },
+    {
+      "name": "What I learned from looking at every AI/ML tool I could find",
+      "url": "https://huyenchip.com/2020/06/22/mlops.html",
+      "tagline": "",
+      "source": "hackernews",
+      "suggestedCat": "all",
+      "addedDate": "2026-05-24",
+      "new": true
+    },
+    {
+      "name": "LinkedIn is now using everyone's content to train their AI tool",
+      "url": "https://twitter.com/RachelTobac/status/1836471586624540705",
+      "tagline": "",
+      "source": "hackernews",
+      "suggestedCat": "all",
+      "addedDate": "2026-05-24",
+      "new": true
+    },
+    {
+      "name": "What I learned from looking at 900 most popular open source AI tools",
+      "url": "https://huyenchip.com/2024/03/14/ai-oss.html",
+      "tagline": "",
+      "source": "hackernews",
+      "suggestedCat": "all",
+      "addedDate": "2026-05-24",
+      "new": true
+    },
+    {
+      "name": "I built an open source AI tool to find my autoimmune disease",
+      "url": "https://old.reddit.com/r/selfhosted/comments/1ij7s4m/how_i_built_an_open_source_ai_tool_to_find_my/",
+      "tagline": "",
+      "source": "hackernews",
+      "suggestedCat": "all",
+      "addedDate": "2026-05-24",
+      "new": true
+    },
+    {
+      "name": "Generative AI coding tools and agents do not work for me",
+      "url": "https://blog.miguelgrinberg.com/post/why-generative-ai-coding-tools-and-agents-do-not-work-for-me",
+      "tagline": "",
+      "source": "hackernews",
+      "suggestedCat": "all",
+      "addedDate": "2026-05-24",
+      "new": true
+    }
+  ]
+}
