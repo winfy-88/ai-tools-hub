@@ -1131,6 +1131,21 @@
       "featured": null,
       "new": true,
       "addedDate": "2026-05-24"
+    },
+    {
+      "id": "movie-finder",
+      "name": "Movie Finder",
+      "cat": "skill",
+      "tagline": "AI 驱动的电影资源搜索技能，自动搜索 YTS / 1337x / 电影天堂等主流资源站，支持磁力链接和 4K / 1080p 高清资源",
+      "pricing": "free",
+      "pricingLabel": "完全免费",
+      "url": "https://github.com/winfy-88/ai-tools-hub",
+      "emoji": "🎬",
+      "gradient": "linear-gradient(135deg,#e11d48,#f97316)",
+      "tags": ["免费", "电影", "磁力链接"],
+      "featured": { "rank": 2, "title": "新技能首发" },
+      "new": true,
+      "addedDate": "2026-05-24"
     }
   ]
 }

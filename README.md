@@ -36,7 +36,7 @@
 | 📊 AI 数据 | 7 | Julius AI · ChatCSV · Rows · Hex |
 | 📁 AI 办公 | 11 | Copilot · Gamma · Granola · Fireflies |
 | 🔍 AI 搜索 | 7 | Perplexity · You.com · Consensus · Phind |
-| 🧠 技能专区 | 1+ | Ebook Finder · (持续更新中) |
+| 🧠 技能专区 | 2+ | Movie Finder · Ebook Finder · (持续更新中) |
 
 ---
 
@@ -122,6 +122,7 @@ skills/
 
 当前收录：
 - **Ebook Finder** — AI 电子书搜索技能，7+ 书源并行搜索 ([SKILL.md](ebook-finder/SKILL.md))
+- **Movie Finder** — AI 电影资源搜索技能，8+ 资源站并行搜索，支持磁力链接和 4K 高清 ([SKILL.md](movie-finder/SKILL.md))
 
 ---
 
@@ -151,9 +152,9 @@ skills/
 
 ## 📈 数据统计
 
-- 收录工具：**71+**
+- 收录工具：**75+**
 - 工具分类：**10**
-- 完全免费：~40%
+- 完全免费：~38%
 - Freemium：~45%
 - 纯付费：~15%
 
