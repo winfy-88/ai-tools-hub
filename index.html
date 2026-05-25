@@ -182,6 +182,7 @@ main { max-width: 1280px; margin: 0 auto; padding: 0 24px 80px; }
 .tag-free  { background: rgba(0,206,201,.12); color: var(--green); border: 1px solid rgba(0,206,201,.25); }
 .tag-paid  { background: rgba(253,121,168,.12); color: var(--orange); border: 1px solid rgba(253,121,168,.25); }
 .tag-freemium { background: rgba(255,234,167,.12); color: var(--yellow); border: 1px solid rgba(255,234,167,.25); }
+.tag-open-source { background: rgba(99,102,241,.12); color: #a5b4fc; border: 1px solid rgba(99,102,241,.25); }
 .tag-hot   { background: rgba(108,92,231,.15); color: var(--accent2); border: 1px solid rgba(108,92,231,.3); }
 .card-footer {
   display: flex; align-items: center; justify-content: space-between;
@@ -279,7 +280,7 @@ footer a { color: var(--accent2); }
       <input type="text" id="searchInput" placeholder="搜索 AI 工具…" autocomplete="off" />
     </div>
     <div class="header-right">
-      <span class="badge-live">📅 2026年5月24日 更新</span>
+      <span class="badge-live">📅 2026年5月25日 更新</span>
     </div>
   </div>
 </header>
@@ -289,9 +290,9 @@ footer a { color: var(--accent2); }
   <h1>发现最适合你的<br><span>AI 工具箱</span></h1>
   <p>精心 curate 的 AI 工具导航站，覆盖写作、画图、代码、视频、数据分析等全品类，帮你省去筛选时间。</p>
   <div class="stats-row">
-    <div class="stat"><div class="stat-num" id="toolCount">71</div><div class="stat-label">收录工具</div></div>
+    <div class="stat"><div class="stat-num" id="toolCount">75</div><div class="stat-label">收录工具</div></div>
     <div class="stat"><div class="stat-num">10</div><div class="stat-label">工具分类</div></div>
-    <div class="stat"><div class="stat-num">23%</div><div class="stat-label">完全免费</div></div>
+    <div class="stat"><div class="stat-num">24%</div><div class="stat-label">完全免费</div></div>
   </div>
 </section>
 
@@ -341,12 +342,24 @@ footer a { color: var(--accent2); }
         <div class="featured-desc">AI 视频编辑 + 生成双引擎，文字转视频，影视级效果</div>
         <span class="featured-link">→ https://runway.ml</span>
       </div>
+      <div class="featured-card" data-cat="chat">
+        <div class="featured-rank">AI编程新星</div>
+        <div class="featured-name">CC Switch</div>
+        <div class="featured-desc">跨平台 AI 编程助手聚合器，统一使用 Claude Code / Codex / OpenCode / OpenClaw 等</div>
+        <span class="featured-link">→ https://ccswitch.io</span>
+      </div>
+      <div class="featured-card" data-cat="skill">
+        <div class="featured-rank">新技能首发</div>
+        <div class="featured-name">Movie Finder</div>
+        <div class="featured-desc">AI 驱动的电影资源搜索技能，自动搜索 YTS / 1337x / 电影天堂等主流资源站，支持磁力链接和 4K / 1080p 高清资源</div>
+        <span class="featured-link">→ https://github.com/winfy-88/ai-tools-hub</span>
+      </div>
     </div>
   </section>
 
   <section class="section" data-section="chat">
     <div class="section-title">💬 AI 聊天</div>
-    <p class="section-desc">11 个工具</p>
+    <p class="section-desc">12 个工具</p>
     <div class="tool-grid">
       <div class="tool-card" data-cat="chat" data-name="chatgpt">
         <div class="card-top">
@@ -468,7 +481,7 @@ footer a { color: var(--accent2); }
             <div class="tool-tagline">阿里开源大模型系列，支持多种任务和部署方式</div>
           </div>
         </div>
-        <div class="card-tags"><span class="tag tag-free">免费</span><span class="tag tag-free">开源</span></div>
+        <div class="card-tags"><span class="tag tag-free">免费</span><span class="tag tag-open-source">开源</span></div>
         <div class="card-footer">
           <span class="pricing free">开源免费</span>
           <a href="https://qwenlm.github.io" target="_blank" class="visit-btn">立即使用 →</a>
@@ -496,10 +509,24 @@ footer a { color: var(--accent2); }
             <div class="tool-tagline">Hugging Face 出品的开源聊天界面，可切换各种开源模型</div>
           </div>
         </div>
-        <div class="card-tags"><span class="tag tag-free">免费</span><span class="tag tag-free">开源</span></div>
+        <div class="card-tags"><span class="tag tag-free">免费</span><span class="tag tag-open-source">开源</span></div>
         <div class="card-footer">
           <span class="pricing free">完全免费</span>
           <a href="https://huggingface.co/chat" target="_blank" class="visit-btn">立即使用 →</a>
+        </div>
+      </div>
+      <div class="tool-card" data-cat="chat" data-name="cc-switch">
+        <div class="card-top">
+          <div class="tool-icon" style="background:linear-gradient(135deg,#10b981,#059669)">🔀</div>
+          <div class="card-info">
+            <div class="tool-name">CC Switch<span class="new-banner">🆕 NEW</span></div>
+            <div class="tool-tagline">跨平台 AI 编程助手聚合器，统一使用 Claude Code / Codex / OpenCode / OpenClaw 等</div>
+          </div>
+        </div>
+        <div class="card-tags"><span class="tag tag-free">免费</span><span class="tag tag-open-source">Open Source</span><span class="tag tag-freemium">AI编程</span></div>
+        <div class="card-footer">
+          <span class="pricing free">免费</span>
+          <a href="https://ccswitch.io" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
     </div>
@@ -662,7 +689,7 @@ footer a { color: var(--accent2); }
             <div class="tool-tagline">开源免费 AI 画图引擎，可本地部署，无限可能性</div>
           </div>
         </div>
-        <div class="card-tags"><span class="tag tag-free">免费</span><span class="tag tag-free">开源</span></div>
+        <div class="card-tags"><span class="tag tag-free">免费</span><span class="tag tag-open-source">开源</span></div>
         <div class="card-footer">
           <span class="pricing free">开源免费</span>
           <a href="https://stability.ai" target="_blank" class="visit-btn">立即使用 →</a>
@@ -718,7 +745,7 @@ footer a { color: var(--accent2); }
             <div class="tool-tagline">黑森林 Labs 出品，开源免费，图像质量超越 Midjourney V5</div>
           </div>
         </div>
-        <div class="card-tags"><span class="tag tag-free">免费</span><span class="tag tag-free">开源</span></div>
+        <div class="card-tags"><span class="tag tag-free">免费</span><span class="tag tag-open-source">开源</span></div>
         <div class="card-footer">
           <span class="pricing free">完全免费开源</span>
           <a href="https://blackforestlabs.ai" target="_blank" class="visit-btn">立即使用 →</a>
@@ -742,7 +769,7 @@ footer a { color: var(--accent2); }
   </section>
   <section class="section" data-section="code">
     <div class="section-title">💻 AI 编程</div>
-    <p class="section-desc">8 个工具</p>
+    <p class="section-desc">10 个工具</p>
     <div class="tool-grid">
       <div class="tool-card" data-cat="code" data-name="copilot">
         <div class="card-top">
@@ -780,7 +807,7 @@ footer a { color: var(--accent2); }
             <div class="tool-tagline">终端里的 AI 结对编程，支持多文件同时编辑，完全免费开源</div>
           </div>
         </div>
-        <div class="card-tags"><span class="tag tag-free">免费</span><span class="tag tag-free">开源</span></div>
+        <div class="card-tags"><span class="tag tag-free">免费</span><span class="tag tag-open-source">开源</span></div>
         <div class="card-footer">
           <span class="pricing free">完全免费开源</span>
           <a href="https://aider.chat" target="_blank" class="visit-btn">立即使用 →</a>
@@ -794,7 +821,7 @@ footer a { color: var(--accent2); }
             <div class="tool-tagline">开源 VS Code / JetBrains AI 插件，支持自定义模型</div>
           </div>
         </div>
-        <div class="card-tags"><span class="tag tag-free">免费</span><span class="tag tag-free">开源</span></div>
+        <div class="card-tags"><span class="tag tag-free">免费</span><span class="tag tag-open-source">开源</span></div>
         <div class="card-footer">
           <span class="pricing free">开源免费</span>
           <a href="https://continue.dev" target="_blank" class="visit-btn">立即使用 →</a>
@@ -854,6 +881,34 @@ footer a { color: var(--accent2); }
         <div class="card-footer">
           <span class="pricing freemium">免费版可用</span>
           <a href="https://bolt.new" target="_blank" class="visit-btn">立即使用 →</a>
+        </div>
+      </div>
+      <div class="tool-card" data-cat="code" data-name="browser-use">
+        <div class="card-top">
+          <div class="tool-icon" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">🌐</div>
+          <div class="card-info">
+            <div class="tool-name">Browser Use<span class="new-banner">🆕 NEW</span></div>
+            <div class="tool-tagline">让 AI Agent 自动操作网页，像人一样点击、填写、浏览，自动化在线任务</div>
+          </div>
+        </div>
+        <div class="card-tags"><span class="tag tag-open-source">开源</span><span class="tag tag-freemium">Agent</span><span class="tag tag-freemium">自动化</span></div>
+        <div class="card-footer">
+          <span class="pricing open-source">开源免费</span>
+          <a href="https://github.com/browser-use/browser-use" target="_blank" class="visit-btn">立即使用 →</a>
+        </div>
+      </div>
+      <div class="tool-card" data-cat="code" data-name="nocobase">
+        <div class="card-top">
+          <div class="tool-icon" style="background:linear-gradient(135deg,#0ea5e9,#6366f1)">🏗️</div>
+          <div class="card-info">
+            <div class="tool-name">NocoBase<span class="new-banner">🆕 NEW</span></div>
+            <div class="tool-tagline">开源 AI + 无代码平台，快速搭建业务系统，AI 工作在生产验证过的基础设施上</div>
+          </div>
+        </div>
+        <div class="card-tags"><span class="tag tag-open-source">开源</span><span class="tag tag-freemium">无代码</span><span class="tag tag-freemium">企业级</span></div>
+        <div class="card-footer">
+          <span class="pricing open-source">开源免费</span>
+          <a href="https://github.com/nocobase/nocobase" target="_blank" class="visit-btn">立即使用 →</a>
         </div>
       </div>
     </div>
@@ -1380,7 +1435,7 @@ footer a { color: var(--accent2); }
   </section>
   <section class="section" data-section="skill">
     <div class="section-title">🧠 技能专区</div>
-    <p class="section-desc">1 个工具</p>
+    <p class="section-desc">2 个工具</p>
     <div class="tool-grid">
       <div class="tool-card skill-card" data-cat="skill" data-name="ebook-finder">
         <div class="card-top">
@@ -1390,7 +1445,21 @@ footer a { color: var(--accent2); }
             <div class="tool-tagline">AI 驱动的电子书搜索技能，自动搜索 Z-Library / LibGen / 安娜的档案等主流免费书库，支持 PDF / EPUB / MOBI 下载</div>
           </div>
         </div>
-        <div class="card-tags"><span class="tag tag-free">免费</span><span class="tag tag-freemium">Open Source</span></div>
+        <div class="card-tags"><span class="tag tag-free">免费</span><span class="tag tag-open-source">Open Source</span></div>
+        <div class="card-footer">
+          <span class="pricing free">完全免费</span>
+          <a href="https://github.com/winfy-88/ai-tools-hub" target="_blank" class="visit-btn">立即使用 →</a>
+        </div>
+      </div>
+      <div class="tool-card skill-card" data-cat="skill" data-name="movie-finder">
+        <div class="card-top">
+          <div class="tool-icon" style="background:linear-gradient(135deg,#e11d48,#f97316)">🎬</div>
+          <div class="card-info">
+            <div class="tool-name">Movie Finder<span class="new-banner">🆕 NEW</span></div>
+            <div class="tool-tagline">AI 驱动的电影资源搜索技能，自动搜索 YTS / 1337x / 电影天堂等主流资源站，支持磁力链接和 4K / 1080p 高清资源</div>
+          </div>
+        </div>
+        <div class="card-tags"><span class="tag tag-free">免费</span><span class="tag tag-freemium">电影</span><span class="tag tag-freemium">磁力链接</span></div>
         <div class="card-footer">
           <span class="pricing free">完全免费</span>
           <a href="https://github.com/winfy-88/ai-tools-hub" target="_blank" class="visit-btn">立即使用 →</a>
@@ -1405,7 +1474,7 @@ footer a { color: var(--accent2); }
 <footer>
   <p>🤖 <strong>AI Tools Hub</strong> — 每天帮你发现最好的 AI 工具</p>
   <p style="margin-top:8px">本站内容每日自动更新 · <a href="https://github.com/winfy-88/ai-tools-hub" target="_blank">GitHub</a> · <a href="https://winfy-88.github.io/ai-tools-hub/">在线访问</a></p>
-  <p style="margin-top:8px;opacity:.5">上次更新：2026年5月24日 · Generated from tools.json v2.0</p>
+  <p style="margin-top:8px;opacity:.5">上次更新：2026年5月25日 · Generated from tools.json v2.0</p>
 </footer>
 
 <!-- ══ Script ══ -->

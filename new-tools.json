@@ -1,5 +1,5 @@
 {
-  "date": "2026-05-24",
+  "date": "2026-05-25",
   "sources": [
     "producthunt",
     "github",
@@ -7,21 +7,12 @@
   ],
   "newTools": [
     {
-      "name": "browser-use",
-      "url": "https://github.com/browser-use/browser-use",
-      "tagline": "🌐 Make websites accessible for AI agents. Automate tasks online with ease.",
-      "source": "github",
-      "suggestedCat": "all",
-      "addedDate": "2026-05-24",
-      "new": true
-    },
-    {
       "name": "cc-switch",
       "url": "https://github.com/farion1231/cc-switch",
       "tagline": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Gemini CLI & Hermes Agent. Only official website: ccswitch.io",
       "source": "github",
       "suggestedCat": "chat",
-      "addedDate": "2026-05-24",
+      "addedDate": "2026-05-25",
       "new": true
     },
     {
@@ -30,7 +21,7 @@
       "tagline": "An AI prompt optimizer for writing better prompts and getting better AI results.",
       "source": "github",
       "suggestedCat": "all",
-      "addedDate": "2026-05-24",
+      "addedDate": "2026-05-25",
       "new": true
     },
     {
@@ -39,16 +30,16 @@
       "tagline": "runs anywhere. uses anything",
       "source": "github",
       "suggestedCat": "all",
-      "addedDate": "2026-05-24",
+      "addedDate": "2026-05-25",
       "new": true
     },
     {
-      "name": "nocobase",
-      "url": "https://github.com/nocobase/nocobase",
-      "tagline": "NocoBase is an open-source AI + no-code platform for building business systems fast. Instead of generating everything from scratch, AI works on top of production-proven infrastructure and a WYSIWYG no-code interface, so you get both speed and reliability.",
+      "name": "OpenCLI",
+      "url": "https://github.com/jackwener/OpenCLI",
+      "tagline": "Make Any Website into CLI & Use your logged-in browser by AI agent. ",
       "source": "github",
-      "suggestedCat": "code",
-      "addedDate": "2026-05-24",
+      "suggestedCat": "all",
+      "addedDate": "2026-05-25",
       "new": true
     },
     {
@@ -57,7 +48,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "image",
-      "addedDate": "2026-05-24",
+      "addedDate": "2026-05-25",
       "new": true
     },
     {
@@ -66,7 +57,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-05-24",
+      "addedDate": "2026-05-25",
       "new": true
     },
     {
@@ -75,7 +66,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-05-24",
+      "addedDate": "2026-05-25",
       "new": true
     },
     {
@@ -84,7 +75,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "search",
-      "addedDate": "2026-05-24",
+      "addedDate": "2026-05-25",
       "new": true
     },
     {
@@ -93,7 +84,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-05-24",
+      "addedDate": "2026-05-25",
       "new": true
     },
     {
@@ -102,7 +93,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-05-24",
+      "addedDate": "2026-05-25",
       "new": true
     },
     {
@@ -111,7 +102,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-05-24",
+      "addedDate": "2026-05-25",
       "new": true
     },
     {
@@ -120,7 +111,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-05-24",
+      "addedDate": "2026-05-25",
       "new": true
     },
     {
@@ -129,7 +120,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-05-24",
+      "addedDate": "2026-05-25",
       "new": true
     },
     {
@@ -138,7 +129,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-05-24",
+      "addedDate": "2026-05-25",
       "new": true
     }
   ]
