@@ -1,5 +1,5 @@
 {
-  "date": "2026-05-29",
+  "date": "2026-05-30",
   "sources": [
     "producthunt",
     "github",
@@ -12,7 +12,7 @@
       "tagline": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Gemini CLI & Hermes Agent. Only official website: ccswitch.io",
       "source": "github",
       "suggestedCat": "chat",
-      "addedDate": "2026-05-29",
+      "addedDate": "2026-05-30",
       "new": true
     },
     {
@@ -21,7 +21,7 @@
       "tagline": "An AI prompt optimizer for writing better prompts and getting better AI results.",
       "source": "github",
       "suggestedCat": "all",
-      "addedDate": "2026-05-29",
+      "addedDate": "2026-05-30",
       "new": true
     },
     {
@@ -30,7 +30,7 @@
       "tagline": "runs anywhere. uses anything",
       "source": "github",
       "suggestedCat": "all",
-      "addedDate": "2026-05-29",
+      "addedDate": "2026-05-30",
       "new": true
     },
     {
@@ -39,7 +39,7 @@
       "tagline": "Make Any Website into CLI & Use your logged-in browser by AI agent. ",
       "source": "github",
       "suggestedCat": "all",
-      "addedDate": "2026-05-29",
+      "addedDate": "2026-05-30",
       "new": true
     },
     {
@@ -48,7 +48,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "image",
-      "addedDate": "2026-05-29",
+      "addedDate": "2026-05-30",
       "new": true
     },
     {
@@ -57,7 +57,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-05-29",
+      "addedDate": "2026-05-30",
       "new": true
     },
     {
@@ -66,7 +66,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-05-29",
+      "addedDate": "2026-05-30",
       "new": true
     },
     {
@@ -75,7 +75,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "search",
-      "addedDate": "2026-05-29",
+      "addedDate": "2026-05-30",
       "new": true
     },
     {
@@ -84,7 +84,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-05-29",
+      "addedDate": "2026-05-30",
       "new": true
     },
     {
@@ -93,7 +93,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-05-29",
+      "addedDate": "2026-05-30",
       "new": true
     },
     {
@@ -102,7 +102,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-05-29",
+      "addedDate": "2026-05-30",
       "new": true
     },
     {
@@ -111,7 +111,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-05-29",
+      "addedDate": "2026-05-30",
       "new": true
     },
     {
@@ -120,7 +120,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-05-29",
+      "addedDate": "2026-05-30",
       "new": true
     },
     {
@@ -129,7 +129,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-05-29",
+      "addedDate": "2026-05-30",
       "new": true
     }
   ]
