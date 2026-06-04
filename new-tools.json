@@ -1,5 +1,5 @@
 {
-  "date": "2026-06-03",
+  "date": "2026-06-04",
   "sources": [
     "producthunt",
     "github",
@@ -12,7 +12,16 @@
       "tagline": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Gemini CLI & Hermes Agent. Only official website: ccswitch.io",
       "source": "github",
       "suggestedCat": "chat",
-      "addedDate": "2026-06-03",
+      "addedDate": "2026-06-04",
+      "new": true
+    },
+    {
+      "name": "private-gpt",
+      "url": "https://github.com/zylon-ai/private-gpt",
+      "tagline": "Interact with your documents using the power of GPT, 100% privately, no data leaks",
+      "source": "github",
+      "suggestedCat": "data",
+      "addedDate": "2026-06-04",
       "new": true
     },
     {
@@ -21,7 +30,7 @@
       "tagline": "An AI prompt optimizer for writing better prompts and getting better AI results.",
       "source": "github",
       "suggestedCat": "all",
-      "addedDate": "2026-06-03",
+      "addedDate": "2026-06-04",
       "new": true
     },
     {
@@ -30,16 +39,7 @@
       "tagline": "runs anywhere. uses anything",
       "source": "github",
       "suggestedCat": "all",
-      "addedDate": "2026-06-03",
-      "new": true
-    },
-    {
-      "name": "OpenCLI",
-      "url": "https://github.com/jackwener/OpenCLI",
-      "tagline": "Make Any Website into CLI & Use your logged-in browser by AI agent. ",
-      "source": "github",
-      "suggestedCat": "all",
-      "addedDate": "2026-06-03",
+      "addedDate": "2026-06-04",
       "new": true
     },
     {
@@ -48,7 +48,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "image",
-      "addedDate": "2026-06-03",
+      "addedDate": "2026-06-04",
       "new": true
     },
     {
@@ -57,7 +57,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-06-03",
+      "addedDate": "2026-06-04",
       "new": true
     },
     {
@@ -66,7 +66,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-06-03",
+      "addedDate": "2026-06-04",
       "new": true
     },
     {
@@ -75,7 +75,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "search",
-      "addedDate": "2026-06-03",
+      "addedDate": "2026-06-04",
       "new": true
     },
     {
@@ -84,7 +84,16 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-06-03",
+      "addedDate": "2026-06-04",
+      "new": true
+    },
+    {
+      "name": "Uber's $1,500/month AI limit is a useful signal for AI tool pricing",
+      "url": "https://simonwillison.net/2026/Jun/3/uber-caps-usage/",
+      "tagline": "",
+      "source": "hackernews",
+      "suggestedCat": "all",
+      "addedDate": "2026-06-04",
       "new": true
     },
     {
@@ -93,7 +102,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-06-03",
+      "addedDate": "2026-06-04",
       "new": true
     },
     {
@@ -102,7 +111,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-06-03",
+      "addedDate": "2026-06-04",
       "new": true
     },
     {
@@ -111,7 +120,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-06-03",
+      "addedDate": "2026-06-04",
       "new": true
     },
     {
@@ -120,16 +129,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-06-03",
-      "new": true
-    },
-    {
-      "name": "Generative AI coding tools and agents do not work for me",
-      "url": "https://blog.miguelgrinberg.com/post/why-generative-ai-coding-tools-and-agents-do-not-work-for-me",
-      "tagline": "",
-      "source": "hackernews",
-      "suggestedCat": "all",
-      "addedDate": "2026-06-03",
+      "addedDate": "2026-06-04",
       "new": true
     }
   ]
