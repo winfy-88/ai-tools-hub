@@ -271,3 +271,27 @@ All notable changes to AI Tools Hub are documented here.
 - Product Hunt
 - GitHub Search
 - Hacker News
+
+## 2026-06-05
+
+### 新增工具
+
+- **cc-switch** - [chat] https://github.com/farion1231/cc-switch
+- **private-gpt** - [data] https://github.com/zylon-ai/private-gpt
+- **prompt-optimizer** - [all] https://github.com/linshenkx/prompt-optimizer
+- **openclaude** - [all] https://github.com/Gitlawb/openclaude
+- **Adobe's new image rotation tool is one of the most impressive AI tools seen** - [image] https://www.creativebloq.com/design/adobes-new-image-rotation-tool-is-one-of-the-most-impressive-ai-concepts-weve-seen
+- **Reverse engineering a $1B Legal AI tool exposed 100k+ confidential files** - [all] https://alexschapiro.com/security/vulnerability/2025/12/02/filevine-api-100k
+- **AI tooling must be disclosed for contributions** - [all] https://github.com/ghostty-org/ghostty/pull/8289
+- **Uber's $1,500/month AI limit is a useful signal for AI tool pricing** - [all] https://simonwillison.net/2026/Jun/3/uber-caps-usage/
+- **AI tools are spotting errors in research papers** - [search] https://www.nature.com/articles/d41586-025-00648-5
+- **Potential issues in curl found using AI assisted tools** - [all] https://mastodon.social/@bagder/115241241075258997
+- **What I learned from looking at every AI/ML tool I could find** - [all] https://huyenchip.com/2020/06/22/mlops.html
+- **LinkedIn is now using everyone's content to train their AI tool** - [all] https://twitter.com/RachelTobac/status/1836471586624540705
+- **What I learned from looking at 900 most popular open source AI tools** - [all] https://huyenchip.com/2024/03/14/ai-oss.html
+- **I built an open source AI tool to find my autoimmune disease** - [all] https://old.reddit.com/r/selfhosted/comments/1ij7s4m/how_i_built_an_open_source_ai_tool_to_find_my/
+
+来源: 
+- Product Hunt
+- GitHub Search
+- Hacker News

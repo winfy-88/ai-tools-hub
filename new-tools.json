@@ -1,5 +1,5 @@
 {
-  "date": "2026-06-04",
+  "date": "2026-06-05",
   "sources": [
     "producthunt",
     "github",
@@ -12,7 +12,7 @@
       "tagline": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Gemini CLI & Hermes Agent. Only official website: ccswitch.io",
       "source": "github",
       "suggestedCat": "chat",
-      "addedDate": "2026-06-04",
+      "addedDate": "2026-06-05",
       "new": true
     },
     {
@@ -21,7 +21,7 @@
       "tagline": "Interact with your documents using the power of GPT, 100% privately, no data leaks",
       "source": "github",
       "suggestedCat": "data",
-      "addedDate": "2026-06-04",
+      "addedDate": "2026-06-05",
       "new": true
     },
     {
@@ -30,7 +30,7 @@
       "tagline": "An AI prompt optimizer for writing better prompts and getting better AI results.",
       "source": "github",
       "suggestedCat": "all",
-      "addedDate": "2026-06-04",
+      "addedDate": "2026-06-05",
       "new": true
     },
     {
@@ -39,7 +39,7 @@
       "tagline": "runs anywhere. uses anything",
       "source": "github",
       "suggestedCat": "all",
-      "addedDate": "2026-06-04",
+      "addedDate": "2026-06-05",
       "new": true
     },
     {
@@ -48,7 +48,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "image",
-      "addedDate": "2026-06-04",
+      "addedDate": "2026-06-05",
       "new": true
     },
     {
@@ -57,7 +57,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-06-04",
+      "addedDate": "2026-06-05",
       "new": true
     },
     {
@@ -66,25 +66,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-06-04",
-      "new": true
-    },
-    {
-      "name": "AI tools are spotting errors in research papers",
-      "url": "https://www.nature.com/articles/d41586-025-00648-5",
-      "tagline": "",
-      "source": "hackernews",
-      "suggestedCat": "search",
-      "addedDate": "2026-06-04",
-      "new": true
-    },
-    {
-      "name": "Potential issues in curl found using AI assisted tools",
-      "url": "https://mastodon.social/@bagder/115241241075258997",
-      "tagline": "",
-      "source": "hackernews",
-      "suggestedCat": "all",
-      "addedDate": "2026-06-04",
+      "addedDate": "2026-06-05",
       "new": true
     },
     {
@@ -93,7 +75,25 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-06-04",
+      "addedDate": "2026-06-05",
+      "new": true
+    },
+    {
+      "name": "AI tools are spotting errors in research papers",
+      "url": "https://www.nature.com/articles/d41586-025-00648-5",
+      "tagline": "",
+      "source": "hackernews",
+      "suggestedCat": "search",
+      "addedDate": "2026-06-05",
+      "new": true
+    },
+    {
+      "name": "Potential issues in curl found using AI assisted tools",
+      "url": "https://mastodon.social/@bagder/115241241075258997",
+      "tagline": "",
+      "source": "hackernews",
+      "suggestedCat": "all",
+      "addedDate": "2026-06-05",
       "new": true
     },
     {
@@ -102,7 +102,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-06-04",
+      "addedDate": "2026-06-05",
       "new": true
     },
     {
@@ -111,7 +111,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-06-04",
+      "addedDate": "2026-06-05",
       "new": true
     },
     {
@@ -120,7 +120,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-06-04",
+      "addedDate": "2026-06-05",
       "new": true
     },
     {
@@ -129,7 +129,7 @@
       "tagline": "",
       "source": "hackernews",
       "suggestedCat": "all",
-      "addedDate": "2026-06-04",
+      "addedDate": "2026-06-05",
       "new": true
     }
   ]
