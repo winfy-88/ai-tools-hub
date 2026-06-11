@@ -282,7 +282,48 @@
       .header-inner { height: 56px; }
       .hero { padding: 48px 16px 36px; }
     }
-  </style>
+  
+/* ══ Auth ══ */
+.user-btn { background:none;border:none;cursor:pointer;font-size:1.3rem;padding:4px 10px;border-radius:50%;transition:transform .25s; }
+.user-btn:hover { transform:scale(1.1); }
+
+/* ══ Modal ══ */
+.modal-overlay { display:none;position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,.65);backdrop-filter:blur(6px);align-items:center;justify-content:center; }
+.modal-overlay.open { display:flex; }
+.modal { background:var(--card);border:1px solid var(--border);border-radius:18px;width:90%;max-width:420px;padding:28px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.5);animation:modalIn .2s ease; }
+@keyframes modalIn { from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none} }
+.modal-title { font-size:1.15rem;font-weight:700;margin-bottom:18px; }
+.modal-close { position:absolute;top:12px;right:14px;background:none;border:none;color:var(--muted);cursor:pointer;font-size:1.2rem; }
+.modal-tabs { display:flex;gap:8px;margin-bottom:20px;border-bottom:1px solid var(--border);padding-bottom:10px; }
+.modal-tab { background:none;border:none;color:var(--muted);cursor:pointer;font-size:.95rem;padding:4px 12px;border-radius:8px;transition:.2s; }
+.modal-tab.active { color:var(--accent2);background:rgba(108,92,231,.15); }
+.modal-panel { display:none; }
+.modal-panel.active { display:block; }
+.form-group { margin-bottom:14px; }
+.form-group label { display:block;font-size:.82rem;color:var(--muted);margin-bottom:5px; }
+.form-group input { width:100%;padding:9px 14px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:.9rem;outline:none; }
+.form-group input:focus { border-color:var(--accent); }
+.btn-primary { width:100%;padding:10px;background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;border-radius:8px;color:#fff;font-size:.95rem;font-weight:600;cursor:pointer; }
+.btn-primary:hover { opacity:.85; }
+.modal-hint { text-align:center;font-size:.82rem;color:var(--muted);margin-top:12px; }
+.modal-hint a { color:var(--accent2); }
+
+/* ══ Share ══ */
+.share-preview { background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:12px 16px;margin-bottom:14px;font-size:.88rem;color:var(--muted); }
+.share-links { display:flex;gap:8px;margin:14px 0;flex-wrap:wrap; }
+.share-btn { flex:1;min-width:90px;padding:8px 10px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text);cursor:pointer;font-size:.82rem;text-align:center;transition:.2s; }
+.share-btn:hover { border-color:var(--accent); }
+.share-btn.copied { border-color:var(--green);color:var(--green); }
+
+/* ══ Affiliate ══ */
+.affiliate-box { background:rgba(0,206,201,.06);border:1px solid rgba(0,206,201,.2);border-radius:10px;padding:14px 16px;margin-top:14px; }
+.affiliate-box label { font-size:.82rem;color:var(--green);font-weight:600;display:block;margin-bottom:6px; }
+.affiliate-row { display:flex;gap:8px; }
+.affiliate-row input { flex:1; }
+.btn-copy { padding:8px 14px;background:var(--green);border:none;border-radius:8px;color:#000;font-weight:600;cursor:pointer;font-size:.82rem; }
+.btn-copy:hover { opacity:.8; }
+.affiliate-hint { font-size:.75rem;color:var(--muted);margin-top:6px; }
+</style>
 </head>
 <body>
 
@@ -1678,34 +1719,120 @@
 <!-- ══ Footer ══ -->
 <footer>
   <p>🤖 <strong>AI Tools Hub</strong> — 每天帮你发现最好的 AI 工具</p>
-  <p style="margin-top:8px">本站内容每日更新，<a href="#">提交新工具</a> · <a href="#">RSS 订阅</a></p>
+  <p style="margin-top:8px">
+    <a href="#"><span data-translate="submit">提交新工具</span></a> ·
+    <a href="#"><span data-translate="rss">RSS 订阅</span></a> ·
+    <a href="#" onclick="showAbout();return false"><span data-translate="about">关于我们</span></a>
+  </p>
   <p style="margin-top:8px;opacity:.5">© 2025 AI Tools Hub. Made with 💜 by AI.</p>
 </footer>
+
+<!-- ══ Auth & Share Modals ══ -->
+<div class="modal-overlay" id="authModal">
+  <div class="modal">
+    <div class="modal-tabs">
+      <button class="modal-tab active" data-tab="login" onclick="switchAuthTab('login')">登录</button>
+      <button class="modal-tab" data-tab="register" onclick="switchAuthTab('register')">注册</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-panel active" id="panel-login">
+        <div class="form-group"><label>邮箱</label><input type="email" id="loginEmail" placeholder="your@email.com"></div>
+        <div class="form-group"><label>密码</label><input type="password" id="loginPwd" placeholder="••••••••"></div>
+        <button class="btn-primary" onclick="doLogin()">登录</button>
+        <p class="modal-hint">首次使用？<a href="#" onclick="switchAuthTab('register');return false">立即注册</a></p>
+      </div>
+      <div class="modal-panel" id="panel-register">
+        <div class="form-group"><label>昵称</label><input type="text" id="regName" placeholder="你的昵称"></div>
+        <div class="form-group"><label>邮箱</label><input type="email" id="regEmail" placeholder="your@email.com"></div>
+        <div class="form-group"><label>密码</label><input type="password" id="regPwd" placeholder="至少6位"></div>
+        <button class="btn-primary" onclick="doRegister()">注册</button>
+        <p class="modal-hint">已有账号？<a href="#" onclick="switchAuthTab('login');return false">去登录</a></p>
+      </div>
+    </div>
+    <button class="modal-close" onclick="closeModal('authModal')">✕</button>
+  </div>
+</div>
+
+<div class="modal-overlay" id="shareModal">
+  <div class="modal">
+    <div class="modal-title">🔗 分享工具</div>
+    <div class="modal-body">
+      <div class="share-preview" id="sharePreview"></div>
+      <div class="form-group"><label>你的推荐语</label><textarea id="shareText" rows="3" placeholder="写一句推荐理由…"></textarea></div>
+      <div class="share-links">
+        <button class="share-btn" onclick="shareToTwitter()">𝕏 X</button>
+        <button class="share-btn" onclick="shareCopyLink()">📋 复制链接</button>
+        <button class="share-btn" onclick="shareQRCode()">📱 二维码</button>
+      </div>
+      <div class="affiliate-box">
+        <label>🏷️ 联盟追踪链接</label>
+        <div class="affiliate-row">
+          <input type="text" id="affLink" readonly>
+          <button class="btn-copy" onclick="copyAffiliate()">复制</button>
+        </div>
+        <p class="affiliate-hint">通过此链接注册的用户将自动关联你的推荐 ID，获取佣金。</p>
+      </div>
+    </div>
+    <button class="modal-close" onclick="closeModal('shareModal')">✕</button>
+  </div>
+</div>
+
+<div class="modal-overlay" id="aboutModal">
+  <div class="modal">
+    <div class="modal-title">ℹ️ 关于 AI Tools Hub</div>
+    <div class="modal-body">
+      <p>AI Tools Hub 是一个精心 curated 的 AI 工具导航站，覆盖 10 大分类。</p>
+      <p>🔥 <strong>特色功能：</strong></p>
+      <ul style="margin:8px 0;padding-left:20px;line-height:2">
+        <li>🧩 Agent 插件专区</li>
+        <li>🧠 Skill 专区</li>
+        <li>💰 联盟推荐 — 通过推荐链接注册可获佣金</li>
+        <li>📊 每日更新 — 自动同步最新 AI 工具动态</li>
+      </ul>
+      <p>📧 <a href="mailto:wfy_1988@163.com">联系我们</a></p>
+    </div>
+    <button class="modal-close" onclick="closeModal('aboutModal')">✕</button>
+  </div>
+</div>
 
 <!-- ══ Toast ══ -->
 <div class="toast" id="toast"></div>
 
 <!-- ══ Script ══ -->
+
+<!-- Script -->
 <script>
-// ── Count tools ──
 document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('.tool-card');
   document.getElementById('toolCount').textContent = cards.length;
+  document.querySelectorAll('.card-footer').forEach(footer => {
+    if (!footer.querySelector('.share-trigger')) {
+      const btn = document.createElement('button');
+      btn.className = 'share-trigger';
+      btn.textContent = '分享';
+      btn.style.cssText = 'background:none;border:1px solid var(--border);border-radius:6px;padding:3px 10px;font-size:.78rem;color:var(--muted);cursor:pointer;transition:.2s;';
+      btn.addEventListener('mouseenter', () => btn.style.borderColor = 'var(--accent)');
+      btn.addEventListener('mouseleave', () => btn.style.borderColor = 'var(--border)');
+      btn.addEventListener('click', (e) => { e.stopPropagation(); openShareModal(footer); });
+      footer.insertBefore(btn, footer.firstChild);
+    }
+  });
+  const saved = localStorage.getItem('aith_user');
+  if (saved) { window._user = JSON.parse(saved); updateUserUI(); }
+  window._clicks = JSON.parse(localStorage.getItem('aith_clicks') || '{}');
+  window._shares = JSON.parse(localStorage.getItem('aith_shares') || '{}');
+  updateShareCount();
 });
 
-// ── Category filter ──
 const catNav = document.getElementById('catNav');
 const sections = document.querySelectorAll('.section[data-section]');
 const featuredCards = document.querySelectorAll('.featured-card');
-
 catNav.addEventListener('click', (e) => {
   const btn = e.target.closest('.cat-btn');
   if (!btn) return;
-  // toggle active
   catNav.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   const cat = btn.dataset.cat;
-  // filter sections
   sections.forEach(sec => {
     const cards = sec.querySelectorAll('.tool-card');
     let visible = false;
@@ -1716,19 +1843,17 @@ catNav.addEventListener('click', (e) => {
     });
     sec.style.display = visible ? '' : 'none';
   });
-  // filter featured
   featuredCards.forEach(c => {
     const show = cat === 'all' || c.dataset.cat === cat;
     c.style.display = show ? '' : 'none';
   });
 });
 
-// ── Search ──
 const searchInput = document.getElementById('searchInput');
 searchInput.addEventListener('input', (e) => {
   const q = e.target.value.toLowerCase().trim();
-  const sections = document.querySelectorAll('.section[data-section]');
-  sections.forEach(sec => {
+  const allSections = document.querySelectorAll('.section[data-section]');
+  allSections.forEach(sec => {
     const cards = sec.querySelectorAll('.tool-card');
     let visible = false;
     cards.forEach(c => {
@@ -1738,43 +1863,131 @@ searchInput.addEventListener('input', (e) => {
     });
     sec.style.display = visible ? '' : 'none';
   });
-  featuredCards.forEach(c => {
-    const match = !q || c.dataset.cat.includes(q) || c.querySelector('.featured-name').textContent.toLowerCase().includes(q);
-    c.style.display = match ? '' : 'none';
-  });
 });
 
-// ── Toast helper ──
-function showToast(msg) {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 2800);
+// USER
+function updateUserUI() {
+  const btn = document.getElementById('userBtn');
+  if (window._user) {
+    btn.textContent = window._user.name ? window._user.name[0].toUpperCase() : '?';
+    btn.title = window._user.name || window._user.email;
+  }
 }
-
-// ── Card click ──
-document.querySelectorAll('.visit-btn').forEach(btn => {
-  btn.addEventListener('click', e => {
-    e.stopPropagation();
-  });
+document.getElementById('userBtn').addEventListener('click', () => {
+  if (window._user) {
+    if (confirm('当前账号：' + (window._user.name || window._user.email) + '\n点击确定注销')) { doLogout(); }
+  } else { openModal('authModal'); }
 });
+function doRegister() {
+  const name = document.getElementById('regName').value.trim();
+  const email = document.getElementById('regEmail').value.trim();
+  const pwd = document.getElementById('regPwd').value;
+  if (!email || !pwd || pwd.length < 6) { alert('请填写完整，密码至少6位'); return; }
+  let users = JSON.parse(localStorage.getItem('aith_users_db') || '[]');
+  if (users.find(u => u.email === email)) { alert('该邮箱已注册'); return; }
+  const user = { name, email, pwd, id: 'u_' + Date.now(), refId: 'ref_' + Math.random().toString(36).slice(2,8) };
+  users.push(user);
+  localStorage.setItem('aith_users_db', JSON.stringify(users));
+  localStorage.setItem('aith_user', JSON.stringify(user));
+  window._user = user; updateUserUI(); closeModal('authModal');
+  showToast('注册成功！欢迎 ' + (name || email));
+}
+function doLogin() {
+  const email = document.getElementById('loginEmail').value.trim();
+  const pwd = document.getElementById('loginPwd').value;
+  const users = JSON.parse(localStorage.getItem('aith_users_db') || '[]');
+  const user = users.find(u => u.email === email && u.pwd === pwd);
+  if (!user) { alert('邮箱或密码错误'); return; }
+  localStorage.setItem('aith_user', JSON.stringify(user));
+  window._user = user; updateUserUI(); closeModal('authModal');
+  showToast('登录成功！');
+}
+function doLogout() { localStorage.removeItem('aith_user'); window._user = null; document.getElementById('userBtn').textContent = '?'; showToast('已注销'); }
 
-// ── Intersection Observer (fade-in) ──
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
+// AFFILIATE
+const AFF_MAP = {};
+function getAffUrl(name) { return AFF_MAP[name] || '#'; }
+// Auto-update all visit-btn hrefs with affiliate tracking
+function applyAffiliateLinks() {
+  document.querySelectorAll('.tool-card').forEach(card => {
+    const name = card.dataset.name;
+    const affUrl = getAffUrl(name);
+    if (affUrl && affUrl !== '#') {
+      const btn = card.querySelector('.visit-btn');
+      if (btn && btn.tagName === 'A') {
+        btn.href = affUrl;
+        btn.addEventListener('click', function() { trackClick(name); });
+      }
     }
   });
-}, { threshold: 0.08 });
-
-document.querySelectorAll('.tool-card, .featured-card, .section').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = 'opacity .5s ease, transform .5s ease';
-  observer.observe(el);
+}
+document.addEventListener('DOMContentLoaded', applyAffiliateLinks);
+// Track featured card clicks
+document.querySelectorAll('.featured-card').forEach(card => {
+  card.style.cursor = 'pointer';
+  card.addEventListener('click', () => {
+    const link = card.querySelector('.featured-link');
+    if (link) { window.open(link.textContent.replace(/^→\s*/, ''), '_blank'); }
+  });
 });
-</script>
+function trackClick(name) { window._clicks[name] = (window._clicks[name] || 0) + 1; localStorage.setItem('aith_clicks', JSON.stringify(window._clicks)); }
+
+// SHARE
+let currentShareTool = null;
+function openShareModal(footer) {
+  const card = footer.closest('.tool-card');
+  if (!card) return;
+  const name = card.querySelector('.tool-name').textContent.trim();
+  const tagline = card.querySelector('.tool-tagline').textContent.trim();
+  currentShareTool = card.dataset.name;
+  document.getElementById('sharePreview').textContent = name + ' — ' + tagline;
+  document.getElementById('shareText').value = '';
+  document.getElementById('affLink').value = getAffUrl(currentShareTool);
+  openModal('shareModal');
+}
+function shareToTwitter() {
+  if (!currentShareTool) return;
+  const card = document.querySelector('.tool-card[data-name="' + currentShareTool + '"]');
+  const name = card ? card.querySelector('.tool-name').textContent.trim() : currentShareTool;
+  const text = (document.getElementById('shareText').value || '推荐 AI 工具：' + name).trim();
+  const url = encodeURIComponent(getAffUrl(currentShareTool));
+  window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + url, '_blank');
+  recordShare();
+}
+function shareCopyLink() { navigator.clipboard.writeText(document.getElementById('affLink').value); showToast('链接已复制！'); recordShare(); }
+function shareQRCode() { showToast('二维码功能开发中~'); recordShare(); }
+function copyAffiliate() { navigator.clipboard.writeText(document.getElementById('affLink').value); showToast('联盟链接已复制！'); }
+function recordShare() {
+  window._shares[currentShareTool] = (window._shares[currentShareTool] || 0) + 1;
+  localStorage.setItem('aith_shares', JSON.stringify(window._shares));
+  updateShareCount();
+}
+function updateShareCount() {
+  let total = 0;
+  for (let k in window._shares) total += window._shares[k];
+  const el = document.getElementById('shareCount');
+  if (el) el.textContent = total;
+}
+
+// MODAL
+function openModal(id) { document.getElementById(id).classList.add('open'); }
+function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+document.querySelectorAll('.modal-overlay').forEach(m => {
+  m.addEventListener('click', e => { if (e.target === m) m.classList.remove('open'); });
+});
+function switchAuthTab(tab) {
+  document.querySelectorAll('.modal-tab').forEach(t => t.classList.toggle('active', t.dataset.tab === tab));
+  document.querySelectorAll('.modal-panel').forEach(p => p.classList.toggle('active', p.id === 'panel-' + tab));
+}
+function showAbout() { openModal('aboutModal'); }
+
+// TOAST
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') document.querySelectorAll('.modal-overlay.open').forEach(m => m.classList.remove('open')); });
+</script>>
 </body>
 </html>
