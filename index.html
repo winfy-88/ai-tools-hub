@@ -5,7 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Tools Hub — 发现最好的 AI 工具</title>
   <meta name="description" content="精心 curated 的 AI 工具导航站，涵盖聊天、写作、画图、代码、视频等全品类，每日更新。" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="精心 curated 的 AI 工具导航站，涵盖聊天、写作、画图、代码、视频等全品类，每日更新。" />
+<meta name="keywords" content="AI工具,人工智能,AI导航,ChatGPT,Midjourney,GitHub Copilot,Agent插件,OpenClaw" />
+<meta name="robots" content="index,follow" />
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="AI Tools Hub — 发现最好的 AI 工具" />
+<meta property="og:description" content="精选 87+ AI 工具，10 大分类，涵盖 Agent 插件与 Skill 专区。" />
+<meta property="og:image" content="https://winfy-88.github.io/ai-tools-hub/og.png" />
+<meta property="og:url" content="https://winfy-88.github.io/ai-tools-hub/" />
+<meta property="og:site_name" content="AI Tools Hub" />
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="AI Tools Hub — 发现最好的 AI 工具" />
+<meta name="twitter:description" content="精选 87+ AI 工具，10 大分类，涵盖 Agent 插件与 Skill 专区。" />
+<meta name="twitter:image" content="https://winfy-88.github.io/ai-tools-hub/og.png" />
+<!-- PWA -->
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#0f0f1a" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>" />
   <style>
     /* ── Reset & Base ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -323,6 +342,79 @@
 .btn-copy { padding:8px 14px;background:var(--green);border:none;border-radius:8px;color:#000;font-weight:600;cursor:pointer;font-size:.82rem; }
 .btn-copy:hover { opacity:.8; }
 .affiliate-hint { font-size:.75rem;color:var(--muted);margin-top:6px; }
+
+
+/* ══ Theme ══ */
+.theme-toggle { background:none;border:none;cursor:pointer;font-size:1.15rem;padding:4px 8px;border-radius:50%;transition:.2s; }
+.theme-toggle:hover { transform:scale(1.1); }
+body.light-theme { --bg:#f5f5f8;--card:#fff;--card2:#f0f0f5;--text:#1a1a2e;--muted:#666680;--border:#dddde5;--shadow:0 4px 24px rgba(0,0,0,.08); }
+body.light-theme header { background:rgba(245,245,248,.9);border-bottom-color:var(--border); }
+
+/* ══ Modal ══ */
+.modal-body { max-height:70vh;overflow-y:auto; }
+.modal-body::-webkit-scrollbar { width:5px; }
+.modal-body::-webkit-scrollbar-thumb { background:var(--border);border-radius:4px; }
+
+/* ══ Toast ══ */
+#toast { position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--card);border:1px solid var(--accent);color:var(--text);padding:10px 24px;border-radius:50px;font-size:.88rem;z-index:3000;opacity:0;transition:all .3s;pointer-events:none; }
+#toast.show { opacity:1;transform:translateX(-50%) translateY(0); }
+
+/* ══ User Panel ══ */
+.user-panel { position:absolute;top:58px;right:0;width:340px;background:var(--card);border:1px solid var(--border);border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.4);z-index:500;display:none;overflow:hidden;animation:modalIn .2s; }
+.user-panel.open { display:block; }
+.user-panel-header { padding:20px;text-align:center;border-bottom:1px solid var(--border); }
+.user-avatar-lg { width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:700;color:#fff;margin:0 auto 8px; }
+.user-panel-name { font-size:1rem;font-weight:700; }
+.user-panel-email { font-size:.78rem;color:var(--muted);margin-top:2px; }
+.user-stats { display:flex;padding:12px 0; }
+.user-stat { flex:1;text-align:center; }
+.user-stat-num { font-size:1.15rem;font-weight:800;color:var(--accent2); }
+.user-stat-label { font-size:.72rem;color:var(--muted); }
+.user-panel-actions { padding:8px 0; }
+.up-btn { width:100%;padding:10px 16px;background:none;border:none;color:var(--text);cursor:pointer;font-size:.88rem;text-align:left;transition:.15s;display:flex;align-items:center;gap:8px; }
+.up-btn:hover { background:var(--bg); }
+.up-btn.danger { color:#e74c3c; }
+.up-btn .icon { width:20px;text-align:center; }
+
+/* ══ Bookmark ══ */
+.bookmark-btn { background:none;border:none;cursor:pointer;font-size:.9rem;color:var(--muted);padding:0;transition:.2s; }
+.bookmark-btn:hover { color:#f39c12; }
+.bookmark-btn.bookmarked { color:#f39c12; }
+
+/* ══ Share Image ══ */
+.share-img-area { text-align:center;padding:16px;background:var(--bg);border-radius:10px;margin-bottom:14px; }
+.share-img-area canvas { max-width:100%;border-radius:8px; }
+
+/* ══ Check-in ══ */
+.checkin-btn { width:100%;padding:10px;background:linear-gradient(135deg,#00b894,#55efc4);border:none;border-radius:8px;color:#fff;font-weight:600;cursor:pointer;font-size:.88rem;margin-top:8px; }
+.checkin-btn.checked { background:var(--border);cursor:default; }
+
+/* ══ Commission ══ */
+.comm-row { display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:.85rem; }
+.comm-row:last-child { border:none; }
+.comm-label { color:var(--muted); }
+.comm-val { font-weight:600;color:var(--green); }
+.comm-dash { display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0; }
+.comm-card { background:var(--bg);border-radius:10px;padding:14px;text-align:center; }
+.comm-card-val { font-size:1.3rem;font-weight:800; }
+.comm-card-label { font-size:.75rem;color:var(--muted);margin-top:4px; }
+.comm-card-val.earned { color:#2ecc71; }
+.comm-card-val.clicks { color:#3498db; }
+.comm-card-val.shares { color:#9b59b6; }
+
+/* ══ Search Suggest ══ */
+.search-suggest { position:absolute;top:100%;left:0;right:0;background:var(--card);border:1px solid var(--border);border-radius:12px;margin-top:4px;z-index:200;max-height:300px;overflow-y:auto;box-shadow:0 8px 30px rgba(0,0,0,.3);display:none; }
+.search-suggest.show { display:block; }
+.search-suggest-item { padding:10px 16px;cursor:pointer;font-size:.85rem;transition:.15s; }
+.search-suggest-item:hover { background:var(--bg); }
+
+/* ══ Responsive ══ */
+@media(max-width:640px) { .user-panel { width:calc(100vw - 32px);right:-8px; } .share-links { flex-direction:column; } .share-btn { min-width:unset; } }
+
+/* ══ Animations ══ */
+@keyframes modalIn { from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none} }
+@keyframes fadeIn { from{opacity:0}to{opacity:1} }
+@keyframes slideUp { from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none} }
 </style>
 </head>
 <body>
@@ -334,9 +426,13 @@
     <div class="search-box">
       <span class="search-icon">🔍</span>
       <input type="text" id="searchInput" placeholder="搜索 AI 工具…" autocomplete="off" />
+        <div class="search-suggest" id="searchSuggest"></div>
+        <div class="search-suggest" id="searchSuggest"></div>
     </div>
     <div class="header-right">
       <span class="badge-live">● 每日更新</span>
+      <button id="themeToggle" class="theme-toggle" title="切换主题">🌙</button>
+      <button id="userBtn" class="user-btn" title="我的">👤</button>
     </div>
   </div>
 </header>
@@ -1753,11 +1849,18 @@
   </div>
 </div>
 
+<!-- User Panel -->
+<div class="user-panel" id="userPanel">
+  <div id="userPanelBody"></div>
+</div>
+
 <div class="modal-overlay" id="shareModal">
   <div class="modal">
     <div class="modal-title">🔗 分享工具</div>
     <div class="modal-body">
       <div class="share-preview" id="sharePreview"></div>
+      <div class="share-img-area" id="shareImgArea"><p style="color:var(--muted);font-size:.82rem">点击「生成分享图」创建带品牌水印的图片</p></div>
+      <div id="qrContainer" style="display:none;text-align:center;margin:8px 0"><img id="shareQRImg" style="border-radius:8px" /></div>
       <div class="form-group"><label>你的推荐语</label><textarea id="shareText" rows="3" placeholder="写一句推荐理由…"></textarea></div>
       <div class="share-links">
         <button class="share-btn" onclick="shareToTwitter()">𝕏 X</button>
@@ -1795,121 +1898,368 @@
   </div>
 </div>
 
+
+<!-- Check-in Modal -->
+<div class="modal-overlay" id="checkinModal">
+  <div class="modal">
+    <div class="modal-title">📅 每日签到</div>
+    <div class="modal-body">
+      <p style="color:var(--muted);font-size:.85rem;margin-bottom:12px">每日签到获得 10 经验值，提升你的等级！</p>
+      <div id="checkinBtn" class="checkin-btn" onclick="doCheckin()">签到 +10 经验</div>
+      <p style="font-size:.8rem;color:var(--muted);margin-top:8px">连续签到可获得额外奖励（开发中）</p>
+    </div>
+    <button class="modal-close" onclick="closeModal('checkinModal')">✕</button>
+  </div>
+</div>
+
+<!-- Share History Modal -->
+<div class="modal-overlay" id="shareHistModal">
+  <div class="modal">
+    <div class="modal-title">📋 我的分享历史</div>
+    <div class="modal-body">
+      <div id="shareHistBody" style="text-align:center;padding:20px;color:var(--muted)">暂无分享记录</div>
+    </div>
+    <button class="modal-close" onclick="closeModal('shareHistModal')">✕</button>
+  </div>
+</div>
+
+<!-- Commission Modal -->
+<div class="modal-overlay" id="commModal">
+  <div class="modal">
+    <div class="modal-title">💰 佣金预估</div>
+    <div class="modal-body">
+      <p style="font-size:.82rem;color:var(--muted);margin-bottom:12px">基于你的分享和点击数据，预估潜在收益：</p>
+      <div class="comm-dash">
+        <div class="comm-card"><div class="comm-card-val clicks" id="commClicks">0</div><div class="comm-card-label">总点击</div></div>
+        <div class="comm-card"><div class="comm-card-val shares" id="commShares">0</div><div class="comm-card-label">总分享</div></div>
+        <div class="comm-card"><div class="comm-card-val earned" id="commEst">$0</div><div class="comm-card-label">预估收益</div></div>
+      </div>
+      <div class="comm-row"><span class="comm-label">点击转化预估</span><span class="comm-val" id="commEstClicks">$0</span></div>
+      <div class="comm-row"><span class="comm-label">分享转化预估</span><span class="comm-val" id="commEstShares">$0</span></div>
+      <div class="comm-row"><span class="comm-label">说明</span><span style="font-size:.75rem;color:var(--muted)">各平台比例不同，以实际申请为准</span></div>
+    </div>
+    <button class="modal-close" onclick="closeModal('commModal')">✕</button>
+  </div>
+</div>
+
 <!-- ══ Toast ══ -->
 <div class="toast" id="toast"></div>
 
 <!-- ══ Script ══ -->
+// ===================== AI Tools Hub — Full Script =====================
+const $ = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
+const uid = () => 'u_' + Date.now().toString(36) + Math.random().toString(36).slice(2,6);
+const today = () => new Date().toISOString().slice(0,10);
 
-<!-- Script -->
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const cards = document.querySelectorAll('.tool-card');
-  document.getElementById('toolCount').textContent = cards.length;
-  document.querySelectorAll('.card-footer').forEach(footer => {
-    if (!footer.querySelector('.share-trigger')) {
-      const btn = document.createElement('button');
-      btn.className = 'share-trigger';
-      btn.textContent = '分享';
-      btn.style.cssText = 'background:none;border:1px solid var(--border);border-radius:6px;padding:3px 10px;font-size:.78rem;color:var(--muted);cursor:pointer;transition:.2s;';
-      btn.addEventListener('mouseenter', () => btn.style.borderColor = 'var(--accent)');
-      btn.addEventListener('mouseleave', () => btn.style.borderColor = 'var(--border)');
-      btn.addEventListener('click', (e) => { e.stopPropagation(); openShareModal(footer); });
-      footer.insertBefore(btn, footer.firstChild);
-    }
+function showToast(msg, dur) {
+  const t = $('#toast');
+  if (!t) return;
+  t.textContent = msg; t.classList.add('show');
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => t.classList.remove('show'), dur || 2500);
+}
+
+// ===================== THEME =====================
+function initTheme() {
+  const saved = localStorage.getItem('aith_theme') || 'dark';
+  document.body.classList.toggle('light-theme', saved === 'light');
+  const btn = $('#themeToggle');
+  if (btn) btn.textContent = saved === 'dark' ? '🌙' : '☀️';
+}
+
+// ===================== SEARCH =====================
+function initSearch() {
+  const inp = $('#searchInput');
+  const sug = $('#searchSuggest');
+  if (!inp || !sug) return;
+  const all = [];
+  $$('.tool-card').forEach(c => {
+    const title = c.querySelector('.tool-name');
+    const tag = c.querySelector('.tool-tagline');
+    all.push({ name: c.dataset.name, title: title ? title.textContent.trim() : '', tag: tag ? tag.textContent.trim() : '', cat: c.dataset.cat });
   });
-  const saved = localStorage.getItem('aith_user');
-  if (saved) { window._user = JSON.parse(saved); updateUserUI(); }
-  window._clicks = JSON.parse(localStorage.getItem('aith_clicks') || '{}');
-  window._shares = JSON.parse(localStorage.getItem('aith_shares') || '{}');
-  updateShareCount();
-});
-
-const catNav = document.getElementById('catNav');
-const sections = document.querySelectorAll('.section[data-section]');
-const featuredCards = document.querySelectorAll('.featured-card');
-catNav.addEventListener('click', (e) => {
-  const btn = e.target.closest('.cat-btn');
-  if (!btn) return;
-  catNav.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  const cat = btn.dataset.cat;
-  sections.forEach(sec => {
-    const cards = sec.querySelectorAll('.tool-card');
-    let visible = false;
-    cards.forEach(c => {
-      const show = cat === 'all' || c.dataset.cat === cat;
-      c.style.display = show ? '' : 'none';
-      if (show) visible = true;
+  inp.addEventListener('input', function() {
+    const q = this.value.trim().toLowerCase();
+    if (!q) { sug.classList.remove('show'); return; }
+    const hits = all.filter(t => t.title.toLowerCase().includes(q) || t.tag.toLowerCase().includes(q) || t.name.includes(q) || t.cat.includes(q)).slice(0, 8);
+    if (!hits.length) { sug.classList.remove('show'); return; }
+    sug.innerHTML = hits.map(function(t) { return '<div class="search-suggest-item" data-name="' + t.name + '">' + t.title + ' <span style="font-size:.78rem;color:var(--muted)">' + t.tag.slice(0, 50) + '</span></div>'; }).join('');
+    sug.classList.add('show');
+    sug.querySelectorAll('.search-suggest-item').forEach(function(el) {
+      el.addEventListener('click', function() {
+        const card = $('.tool-card[data-name="' + el.dataset.name + '"]');
+        if (card) card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        inp.value = el.querySelector('div').textContent.trim();
+        sug.classList.remove('show');
+      });
     });
-    sec.style.display = visible ? '' : 'none';
   });
-  featuredCards.forEach(c => {
-    const show = cat === 'all' || c.dataset.cat === cat;
-    c.style.display = show ? '' : 'none';
-  });
-});
+  document.addEventListener('click', function(e) { if (!e.target.closest('.search-box')) sug.classList.remove('show'); });
+}
 
-const searchInput = document.getElementById('searchInput');
-searchInput.addEventListener('input', (e) => {
-  const q = e.target.value.toLowerCase().trim();
-  const allSections = document.querySelectorAll('.section[data-section]');
-  allSections.forEach(sec => {
-    const cards = sec.querySelectorAll('.tool-card');
-    let visible = false;
-    cards.forEach(c => {
-      const match = !q || c.dataset.name.includes(q) || c.querySelector('.tool-name').textContent.toLowerCase().includes(q) || c.querySelector('.tool-tagline').textContent.toLowerCase().includes(q);
-      c.style.display = match ? '' : 'none';
-      if (match) visible = true;
+// ===================== CATEGORY FILTER =====================
+function initCategoryFilter() {
+  $('#catNav').addEventListener('click', function(e) {
+    const btn = e.target.closest('.cat-btn');
+    if (!btn) return;
+    $$('.cat-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    const cat = btn.dataset.cat;
+    $$('.section[data-section]').forEach(function(sec) {
+      const cards = sec.querySelectorAll('.tool-card');
+      let visible = false;
+      cards.forEach(function(c) {
+        const show = cat === 'all' || c.dataset.cat === cat;
+        c.style.display = show ? '' : 'none';
+        if (show) visible = true;
+      });
+      sec.style.display = visible ? '' : 'none';
     });
-    sec.style.display = visible ? '' : 'none';
+    $$('.featured-card').forEach(function(c) { c.style.display = (cat === 'all' || c.dataset.cat === cat) ? '' : 'none'; });
   });
-});
+}
 
-// USER
+// ===================== FEATURED CLICK =====================
+function initFeaturedClick() {
+  $$('.featured-card').forEach(function(card) {
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', function() {
+      const link = card.querySelector('.featured-link');
+      if (link) { const url = link.textContent.replace(/^→\s*/, ''); window.open(url, '_blank'); }
+    });
+  });
+}
+
+// ===================== UTILS =====================
+function escHtml(s) {
+  const d = document.createElement('div');
+  d.textContent = s;
+  return d.innerHTML;
+}
+
+// ===================== USER SYSTEM =====================
+function saveUser(user) { localStorage.setItem('aith_user', JSON.stringify(user)); window._user = user; updateUserUI(); }
 function updateUserUI() {
-  const btn = document.getElementById('userBtn');
+  const btn = $('#userBtn');
+  if (!btn) return;
   if (window._user) {
-    btn.textContent = window._user.name ? window._user.name[0].toUpperCase() : '?';
+    btn.textContent = (window._user.name || '').charAt(0).toUpperCase() || '?';
     btn.title = window._user.name || window._user.email;
+  } else {
+    btn.textContent = '?';
+    btn.title = '登录 / 注册';
   }
 }
-document.getElementById('userBtn').addEventListener('click', () => {
-  if (window._user) {
-    if (confirm('当前账号：' + (window._user.name || window._user.email) + '\n点击确定注销')) { doLogout(); }
-  } else { openModal('authModal'); }
-});
+function renderUserPanel() {
+  const p = $('#userPanelBody');
+  if (!p) return;
+  if (!window._user) {
+    p.innerHTML = '<div style="text-align:center;padding:30px 20px;color:var(--muted)"><p>未登录</p><button class="btn-primary" onclick="openModal(\'authModal\');closeUserPanel()" style="margin-top:12px">登录 / 注册</button></div>';
+    return;
+  }
+  const u = window._user;
+  const clicks = Object.values(window._clicks).reduce(function(a, b) { return a + b; }, 0);
+  const shares = Object.values(window._shares).reduce(function(a, b) { return a + b; }, 0);
+  const totalExp = (u.exp || 0) + clicks + shares * 2;
+  const level = Math.min(5, Math.floor(totalExp / 50) + 1);
+  const levelNames = ['新手', '进阶', '熟练', '专家', '大师', '传奇'];
+  p.innerHTML =
+    '<div class="user-panel-header"><div class="user-avatar-lg">' + escHtml((u.name || '?').charAt(0).toUpperCase()) + '</div>' +
+    '<div class="user-panel-name">' + escHtml(u.name || '用户') + '</div>' +
+    '<div class="user-panel-email">' + escHtml(u.email) + '</div>' +
+    '<div style="font-size:.75rem;color:var(--accent2);margin-top:4px">Lv.' + level + ' ' + levelNames[level - 1] + '</div>' +
+    '</div>' +
+    '<div class="user-stats"><div class="user-stat"><div class="user-stat-num">' + clicks + '</div><div class="user-stat-label">总点击</div></div>' +
+    '<div class="user-stat"><div class="user-stat-num">' + shares + '</div><div class="user-stat-label">总分享</div></div>' +
+    '<div class="user-stat"><div class="user-stat-num">' + totalExp + '</div><div class="user-stat-label">经验值</div></div></div>' +
+    '<div class="user-panel-actions">' +
+    '<button class="up-btn" onclick="showMyFavorites();closeUserPanel()"><span class="icon">⭐</span> 我的收藏</button>' +
+    '<button class="up-btn" onclick="showShareHistory();closeUserPanel()"><span class="icon">📋</span> 分享历史</button>' +
+    '<button class="up-btn" onclick="showCommission();closeUserPanel()"><span class="icon">💰</span> 佣金预估</button>' +
+    '<button class="up-btn" onclick="showCheckin();closeUserPanel()"><span class="icon">📅</span> 每日签到</button>' +
+    '<button class="up-btn" onclick="showToast(\'设置页开发中~\');closeUserPanel()"><span class="icon">⚙️</span> 设置</button>' +
+    '<button class="up-btn danger" onclick="if(confirm(\'确定注销？\\n' + escHtml(u.name || u.email) + '\'))doLogout()"><span class="icon">🚪</span> 注销</button>' +
+    '</div>';
+}
+
+// ===================== AUTH =====================
 function doRegister() {
-  const name = document.getElementById('regName').value.trim();
-  const email = document.getElementById('regEmail').value.trim();
-  const pwd = document.getElementById('regPwd').value;
-  if (!email || !pwd || pwd.length < 6) { alert('请填写完整，密码至少6位'); return; }
+  const name = $('#regName').value.trim();
+  const email = $('#regEmail').value.trim();
+  const pwd = $('#regPwd').value;
+  if (!email || !email.includes('@')) { showToast('请输入有效邮箱'); return; }
+  if (!pwd || pwd.length < 6) { showToast('密码至少6位'); return; }
   let users = JSON.parse(localStorage.getItem('aith_users_db') || '[]');
-  if (users.find(u => u.email === email)) { alert('该邮箱已注册'); return; }
-  const user = { name, email, pwd, id: 'u_' + Date.now(), refId: 'ref_' + Math.random().toString(36).slice(2,8) };
+  if (users.find(function(u) { return u.email === email; })) { showToast('该邮箱已注册'); return; }
+  const user = { id: uid(), name: name, email: email, pwd: pwd, refId: genId(), level: 1, exp: 0, favorites: [], shareHistory: [], createdAt: today(), checkins: {} };
   users.push(user);
   localStorage.setItem('aith_users_db', JSON.stringify(users));
-  localStorage.setItem('aith_user', JSON.stringify(user));
-  window._user = user; updateUserUI(); closeModal('authModal');
+  saveUser(user);
+  closeModal('authModal');
   showToast('注册成功！欢迎 ' + (name || email));
+  renderUserPanel();
 }
 function doLogin() {
-  const email = document.getElementById('loginEmail').value.trim();
-  const pwd = document.getElementById('loginPwd').value;
-  const users = JSON.parse(localStorage.getItem('aith_users_db') || '[]');
-  const user = users.find(u => u.email === email && u.pwd === pwd);
-  if (!user) { alert('邮箱或密码错误'); return; }
-  localStorage.setItem('aith_user', JSON.stringify(user));
-  window._user = user; updateUserUI(); closeModal('authModal');
+  const email = $('#loginEmail').value.trim();
+  const pwd = $('#loginPwd').value;
+  let users = JSON.parse(localStorage.getItem('aith_users_db') || '[]');
+  const user = users.find(function(u) { return u.email === email && u.pwd === pwd; });
+  if (!user) { showToast('邮箱或密码错误'); return; }
+  saveUser(user);
+  closeModal('authModal');
   showToast('登录成功！');
+  renderUserPanel();
 }
-function doLogout() { localStorage.removeItem('aith_user'); window._user = null; document.getElementById('userBtn').textContent = '?'; showToast('已注销'); }
+function doLogout() {
+  localStorage.removeItem('aith_user');
+  window._user = null;
+  updateUserUI();
+  renderUserPanel();
+  showToast('已注销');
+}
+function switchAuthTab(tab) {
+  $$('.modal-tab').forEach(function(t) { t.classList.toggle('active', t.dataset.tab === tab); });
+  $$('.modal-panel').forEach(function(p) { p.classList.toggle('active', p.id === 'panel-' + tab); });
+}
 
-// AFFILIATE
+// ===================== FAVORITES =====================
+function toggleFavorite(card) {
+  if (!window._user) { openModal('authModal'); return; }
+  const name = card.dataset.name;
+  const idx = window._user.favorites.indexOf(name);
+  if (idx < 0) { window._user.favorites.push(name); showToast('已收藏 ⭐'); }
+  else { window._user.favorites.splice(idx, 1); showToast('已取消收藏'); }
+  let users = JSON.parse(localStorage.getItem('aith_users_db') || '[]');
+  const u = users.find(function(u2) { return u2.id === window._user.id; });
+  if (u) { u.favorites = window._user.favorites; localStorage.setItem('aith_users_db', JSON.stringify(users)); }
+  localStorage.setItem('aith_user', JSON.stringify(window._user));
+  renderUserPanel();
+  // Update bookmark icon
+  const bm = card.querySelector('.bookmark-btn');
+  if (bm) bm.textContent = idx < 0 ? '★' : '☆';
+}
+function showMyFavorites() {
+  if (!window._user) { showToast('请先登录'); return; }
+  const names = window._user.favorites;
+  const cards = [];
+  names.forEach(function(n) { const c = $('.tool-card[data-name="' + n + '"]'); if (c) cards.push(c); });
+  if (!cards.length) { showToast('还没有收藏任何工具~'); return; }
+  $$('.section[data-section]').forEach(function(s) { s.style.display = 'none'; });
+  $$('.featured-card').forEach(function(c) { c.style.display = 'none'; });
+  cards.forEach(function(c) { c.style.display = ''; c.scrollIntoView({ behavior: 'smooth', block: 'center' }); });
+  showToast('找到 ' + cards.length + ' 个收藏');
+}
+
+// ===================== CHECK-IN =====================
+function doCheckin() {
+  if (!window._user) { openModal('authModal'); return; }
+  const d = today();
+  const ck = window._user.checkins || {};
+  if (ck[d]) { showToast('今天已签到过了~'); return; }
+  ck[d] = true;
+  window._user.checkins = ck;
+  window._user.exp = (window._user.exp || 0) + 10;
+  let users = JSON.parse(localStorage.getItem('aith_users_db') || '[]');
+  const u = users.find(function(u2) { return u2.id === window._user.id; });
+  if (u) { u.checkins = ck; u.exp = window._user.exp; localStorage.setItem('aith_users_db', JSON.stringify(users)); }
+  localStorage.setItem('aith_user', JSON.stringify(window._user));
+  renderUserPanel();
+  showToast('签到成功！+10 经验 ✨');
+}
+function showCheckin() {
+  if (!window._user) { showToast('请先登录'); return; }
+  const checked = window._user.checkins && window._user.checkins[today()];
+  const btn = $('#checkinBtn');
+  if (btn) { btn.textContent = checked ? '今日已签到 ✓' : '签到 +10 经验'; btn.disabled = !!checked; btn.className = 'checkin-btn' + (checked ? ' checked' : ''); }
+  openModal('checkinModal');
+}
+
+// ===================== SHARE HISTORY =====================
+function showShareHistory() {
+  if (!window._user) { showToast('请先登录'); return; }
+  const hist = window._user.shareHistory || [];
+  if (!hist.length) { showToast('还没有分享记录~'); return; }
+  const recent = hist.slice(-30).reverse();
+  const list = recent.map(function(h) {
+    return '<div style="padding:8px 0;border-bottom:1px solid var(--border);font-size:.82rem;display:flex;justify-content:space-between"><span>' + escHtml(h.name) + '</span><span style="color:var(--muted)">' + h.date + '</span></div>';
+  }).join('');
+  $('#shareHistBody').innerHTML = list;
+  openModal('shareHistModal');
+}
+
+// ===================== COMMISSION =====================
+function showCommission() {
+  if (!window._user) { showToast('请先登录'); return; }
+  const clicks = Object.values(window._clicks).reduce(function(a, b) { return a + b; }, 0);
+  const shares = Object.values(window._shares).reduce(function(a, b) { return a + b; }, 0);
+  const estClicks = Math.floor(clicks * 0.03);
+  const estShares = Math.floor(shares * 0.5);
+  const estTotal = estClicks + estShares;
+  $('#commClicks').textContent = clicks;
+  $('#commShares').textContent = shares;
+  $('#commEstClicks').textContent = '$' + estClicks;
+  $('#commEstShares').textContent = '$' + estShares;
+  $('#commEst').textContent = '$' + estTotal;
+  openModal('commModal');
+}
+
+// ===================== SHARE IMAGE =====================
+function generateShareImage(name, tagline) {
+  const canvas = document.createElement('canvas');
+  canvas.width = 600; canvas.height = 300;
+  const ctx = canvas.getContext('2d');
+  const grad = ctx.createLinearGradient(0, 0, 600, 300);
+  grad.addColorStop(0, '#1a1a2e'); grad.addColorStop(1, '#6c5ce7');
+  ctx.fillStyle = grad; ctx.fillRect(0, 0, 600, 300);
+  ctx.fillStyle = '#fff'; ctx.font = 'bold 26px sans-serif'; ctx.fillText(name, 30, 70);
+  ctx.fillStyle = '#ccc'; ctx.font = '14px sans-serif';
+  const words = tagline.split(' ');
+  let line = ''; let y = 110;
+  for (let i = 0; i < words.length && y < 200; i++) {
+    const test = line + words[i] + ' ';
+    if (test.length > 40) { ctx.fillText(line, 30, y); line = words[i] + ' '; y += 22; } else { line = test; }
+  }
+  if (line) ctx.fillText(line, 30, y);
+  ctx.fillStyle = '#a29bfe'; ctx.font = '12px sans-serif'; ctx.fillText('AI Tools Hub — winfy-88.github.io/ai-tools-hub/', 30, 260);
+  return canvas;
+}
+function shareAsImage() {
+  if (!currentShareTool) return;
+  const card = $('.tool-card[data-name="' + currentShareTool + '"]');
+  if (!card) return;
+  const name = card.querySelector('.tool-name').textContent.trim();
+  const tagline = card.querySelector('.tool-tagline').textContent.trim();
+  const canvas = generateShareImage(name, tagline);
+  const area = $('#shareImgArea');
+  area.innerHTML = '';
+  area.appendChild(canvas);
+  canvas.style.maxWidth = '100%'; canvas.style.borderRadius = '8px';
+  canvas.toBlob(function(blob) {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a'); a.href = url; a.download = name + '-aithub.png'; a.click();
+    URL.revokeObjectURL(url);
+  });
+  recordShare();
+  showToast('分享图已生成下载！');
+}
+
+// ===================== AFFILIATE =====================
 const AFF_MAP = {};
-function getAffUrl(name) { return AFF_MAP[name] || '#'; }
-// Auto-update all visit-btn hrefs with affiliate tracking
+function getAffUrl(name) { const e = AFF_MAP[name]; return e ? e.url : '#'; }
+function trackClick(name) {
+  window._clicks[name] = (window._clicks[name] || 0) + 1;
+  localStorage.setItem('aith_clicks', JSON.stringify(window._clicks));
+  if (window._user) {
+    window._user.exp = (window._user.exp || 0) + 1;
+    let users = JSON.parse(localStorage.getItem('aith_users_db') || '[]');
+    const u = users.find(function(u2) { return u2.id === window._user.id; });
+    if (u) { u.exp = window._user.exp; localStorage.setItem('aith_users_db', JSON.stringify(users)); }
+    localStorage.setItem('aith_user', JSON.stringify(window._user));
+  }
+}
 function applyAffiliateLinks() {
-  document.querySelectorAll('.tool-card').forEach(card => {
+  $$('.tool-card').forEach(function(card) {
     const name = card.dataset.name;
     const affUrl = getAffUrl(name);
     if (affUrl && affUrl !== '#') {
@@ -1921,73 +2271,148 @@ function applyAffiliateLinks() {
     }
   });
 }
-document.addEventListener('DOMContentLoaded', applyAffiliateLinks);
-// Track featured card clicks
-document.querySelectorAll('.featured-card').forEach(card => {
-  card.style.cursor = 'pointer';
-  card.addEventListener('click', () => {
-    const link = card.querySelector('.featured-link');
-    if (link) { window.open(link.textContent.replace(/^→\s*/, ''), '_blank'); }
-  });
-});
-function trackClick(name) { window._clicks[name] = (window._clicks[name] || 0) + 1; localStorage.setItem('aith_clicks', JSON.stringify(window._clicks)); }
 
-// SHARE
+// ===================== SHARE SYSTEM =====================
 let currentShareTool = null;
 function openShareModal(footer) {
   const card = footer.closest('.tool-card');
   if (!card) return;
   const name = card.querySelector('.tool-name').textContent.trim();
   const tagline = card.querySelector('.tool-tagline').textContent.trim();
+  const url = card.querySelector('.visit-btn').href;
   currentShareTool = card.dataset.name;
-  document.getElementById('sharePreview').textContent = name + ' — ' + tagline;
-  document.getElementById('shareText').value = '';
-  document.getElementById('affLink').value = getAffUrl(currentShareTool);
+  $('#sharePreview').innerHTML = '<strong>' + escHtml(name) + '</strong><br><span style="color:var(--muted)">' + escHtml(tagline) + '</span>';
+  $('#shareText').value = '';
+  $('#affLink').value = getAffUrl(currentShareTool) || url;
+  $('#shareImgArea').innerHTML = '<p style="color:var(--muted);font-size:.82rem;text-align:center">点击下方「生成分享图」创建带品牌水印的图片</p>';
+  $('#qrContainer').style.display = 'none';
   openModal('shareModal');
 }
 function shareToTwitter() {
   if (!currentShareTool) return;
-  const card = document.querySelector('.tool-card[data-name="' + currentShareTool + '"]');
+  const card = $('.tool-card[data-name="' + currentShareTool + '"]');
   const name = card ? card.querySelector('.tool-name').textContent.trim() : currentShareTool;
-  const text = (document.getElementById('shareText').value || '推荐 AI 工具：' + name).trim();
+  const text = ($('#shareText').value || '推荐一个超棒的 AI 工具：' + name).trim();
   const url = encodeURIComponent(getAffUrl(currentShareTool));
   window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + url, '_blank');
   recordShare();
 }
-function shareCopyLink() { navigator.clipboard.writeText(document.getElementById('affLink').value); showToast('链接已复制！'); recordShare(); }
-function shareQRCode() { showToast('二维码功能开发中~'); recordShare(); }
-function copyAffiliate() { navigator.clipboard.writeText(document.getElementById('affLink').value); showToast('联盟链接已复制！'); }
+function shareCopyLink() { navigator.clipboard.writeText($('#affLink').value); showToast('链接已复制！'); recordShare(); }
+function shareQRCode() {
+  const link = $('#affLink').value;
+  const qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(link);
+  $('#shareQRImg').src = qrUrl;
+  $('#qrContainer').style.display = 'block';
+  recordShare();
+}
+function copyAffiliate() { navigator.clipboard.writeText($('#affLink').value); showToast('联盟链接已复制！'); }
 function recordShare() {
   window._shares[currentShareTool] = (window._shares[currentShareTool] || 0) + 1;
   localStorage.setItem('aith_shares', JSON.stringify(window._shares));
   updateShareCount();
+  if (window._user) {
+    window._user.shareHistory = window._user.shareHistory || [];
+    const card = $('.tool-card[data-name="' + currentShareTool + '"]');
+    const name = card ? card.querySelector('.tool-name').textContent.trim() : currentShareTool;
+    window._user.shareHistory.push({ name: name, date: today() });
+    let users = JSON.parse(localStorage.getItem('aith_users_db') || '[]');
+    const u = users.find(function(u2) { return u2.id === window._user.id; });
+    if (u) { u.shareHistory = window._user.shareHistory; localStorage.setItem('aith_users_db', JSON.stringify(users)); }
+    localStorage.setItem('aith_user', JSON.stringify(window._user));
+  }
+  $$('.share-btn').forEach(function(b) { b.classList.add('copied'); setTimeout(function() { b.classList.remove('copied'); }, 1200); });
 }
 function updateShareCount() {
-  let total = 0;
-  for (let k in window._shares) total += window._shares[k];
-  const el = document.getElementById('shareCount');
-  if (el) el.textContent = total;
+  let t = 0;
+  for (let k in window._shares) t += window._shares[k];
+  const el = $('#shareCount');
+  if (el) el.textContent = t;
 }
 
-// MODAL
-function openModal(id) { document.getElementById(id).classList.add('open'); }
-function closeModal(id) { document.getElementById(id).classList.remove('open'); }
-document.querySelectorAll('.modal-overlay').forEach(m => {
-  m.addEventListener('click', e => { if (e.target === m) m.classList.remove('open'); });
+// ===================== MODAL =====================
+function openModal(id) { $('#' + id).classList.add('open'); }
+function closeModal(id) { $('#' + id).classList.remove('open'); }
+$$('.modal-overlay').forEach(function(m) {
+  m.addEventListener('click', function(e) { if (e.target === m) m.classList.remove('open'); });
 });
-function switchAuthTab(tab) {
-  document.querySelectorAll('.modal-tab').forEach(t => t.classList.toggle('active', t.dataset.tab === tab));
-  document.querySelectorAll('.modal-panel').forEach(p => p.classList.toggle('active', p.id === 'panel-' + tab));
-}
 function showAbout() { openModal('aboutModal'); }
 
-// TOAST
-function showToast(msg) {
-  const t = document.getElementById('toast');
-  t.textContent = msg; t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 2500);
+// ===================== COLLECTIONS =====================
+function initCollections() {
+  $$('.tool-card').forEach(function(card) {
+    const top = card.querySelector('.card-top');
+    if (!top) return;
+    if (!card.querySelector('.bookmark-btn')) {
+      const bm = document.createElement('button');
+      bm.className = 'bookmark-btn';
+      bm.textContent = '☆';
+      bm.title = '收藏';
+      bm.addEventListener('click', function(e) { e.stopPropagation(); toggleFavorite(card); });
+      top.appendChild(bm);
+    }
+    // Restore bookmark state
+    if (isFav(card.dataset.name)) {
+      const b = card.querySelector('.bookmark-btn');
+      if (b) b.textContent = '★';
+    }
+  });
 }
-document.addEventListener('keydown', e => { if (e.key === 'Escape') document.querySelectorAll('.modal-overlay.open').forEach(m => m.classList.remove('open')); });
+function isFav(name) { return window._user && window._user.favorites && window._user.favorites.indexOf(name) >= 0; }
+
+// ===================== INIT =====================
+document.addEventListener('DOMContentLoaded', function() {
+  // Count tools
+  const total = $$('.tool-card').length;
+  const tc = $('#toolCount');
+  if (tc) tc.textContent = total;
+
+  // Load persisted
+  const saved = localStorage.getItem('aith_user');
+  if (saved) { window._user = JSON.parse(saved); }
+  window._clicks = JSON.parse(localStorage.getItem('aith_clicks') || '{}');
+  window._shares = JSON.parse(localStorage.getItem('aith_shares') || '{}');
+
+  // Init modules
+  initTheme();
+  initSearch();
+  initCategoryFilter();
+  initFeaturedClick();
+  initCollections();
+
+  // Share buttons
+  $$('.card-footer').forEach(function(footer) {
+    if (!footer.querySelector('.share-trigger')) {
+      const btn = document.createElement('button');
+      btn.className = 'share-trigger';
+      btn.textContent = '🔗 分享';
+      btn.style.cssText = 'background:none;border:1px solid var(--border);border-radius:6px;padding:3px 10px;font-size:.78rem;color:var(--muted);cursor:pointer;transition:.2s;';
+      btn.addEventListener('mouseenter', function() { btn.style.borderColor = 'var(--accent)'; });
+      btn.addEventListener('mouseleave', function() { btn.style.borderColor = 'var(--border)'; });
+      btn.addEventListener('click', function(e) { e.stopPropagation(); openShareModal(footer); });
+      footer.insertBefore(btn, footer.firstChild);
+    }
+  });
+
+  // Affiliate + click tracking
+  applyAffiliateLinks();
+  $$('.tool-card').forEach(function(card) {
+    const name = card.dataset.name;
+    const btn = card.querySelector('.visit-btn');
+    if (btn) btn.addEventListener('click', function() { trackClick(name); });
+  });
+
+  // UI init
+  updateUserUI();
+  renderUserPanel();
+  updateShareCount();
+});
+
+// Keyboard shortcuts
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') $$('.modal-overlay.open').forEach(function(m) { m.classList.remove('open'); });
+  if ((e.metaKey || e.ctrlKey) && e.key === 'k') { e.preventDefault(); const s = $('#searchInput'); if (s) s.focus(); }
+});
+
 </script>>
 </body>
 </html>
