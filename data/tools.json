@@ -139,6 +139,7 @@
       { "name": "Reclaim AI", "tagline": "AI 智能日历管理，自动安排会议/专注时间，治好拖延症", "tags": ["日历", "时间管理"], "pricing": "免费版可用", "link": "https://reclaim.ai", "new": false },
       { "name": "Todoist", "tagline": "AI 智能待办清单，自然语言识别，跨平台同步", "tags": ["待办"], "pricing": "Freemium", "link": "https://todoist.com", "new": false },
       { "name": "Mem", "tagline": "AI 自组织笔记，自动关联+标签+搜索，第二大脑首选", "tags": ["笔记", "知识管理"], "pricing": "付费", "link": "https://get.mem.ai", "new": false },
+      { "name": "Remio", "tagline": "本地优先 AI 记忆与知识库，索引文件、网页、会议、邮件和笔记，快速找回个人上下文", "tags": ["知识管理", "本地优先"], "pricing": "免费版可用", "link": "https://remio.ai", "new": true },
       { "name": "Taskade", "tagline": "AI 工作流+项目管理，团队协作 + AI 自动化一条龙", "tags": ["项目管理"], "pricing": "Freemium", "link": "https://www.taskade.com", "new": false },
       { "name": "Fireflies", "tagline": "AI 会议记录+搜索+洞察，Zoom/Teams/Google Meet 全覆盖", "tags": ["会议"], "pricing": "Freemium", "link": "https://fireflies.ai", "new": false },
       { "name": "Notion", "tagline": "AI 笔记+数据库+项目协作一体化工作空间", "tags": ["笔记"], "pricing": "Freemium", "link": "https://www.notion.so", "new": false },
